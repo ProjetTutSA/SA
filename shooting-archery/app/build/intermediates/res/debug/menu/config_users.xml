@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/action_addperson"
+        android:orderInCategory="100"
+        android:icon="@drawable/add_person"
+        android:showAsAction="always"
+        android:title="@string/add_user">
+    </item>
+    
+    <item
+        android:id="@+id/action_next"
+        android:orderInCategory="100"
+        android:icon="@drawable/next_item"
+        android:showAsAction="always"
+        android:title="@string/next">
+    </item>
+
+</menu><!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/menu/config_users.xml -->

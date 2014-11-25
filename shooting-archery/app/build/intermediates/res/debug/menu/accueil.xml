@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_newgame"
+        android:orderInCategory="100"
+        android:icon="@drawable/add_to_queue"
+        android:showAsAction="always"
+        android:title="@string/nouvelle_seance">
+    </item>
+    
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="100"
+        android:icon="@drawable/action_search"
+        android:showAsAction="always"
+        android:title="@string/parcourir">
+    </item>
+    
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:icon="@drawable/action_settings"
+        android:showAsAction="always"
+        android:title="@string/action_settings">
+    </item>
+    
+</menu>
+<!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/menu/accueil.xml -->

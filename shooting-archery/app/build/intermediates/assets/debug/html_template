@@ -1,0 +1,129 @@
+<%%BEGIN(Header)%%>
+<html>
+  <head>
+    <title>%%APP_NAME%% - Rapport de partie</title>
+    <meta charset="utf8"/>
+    <style>
+		.nomjoueur {color:#33b5e5;}
+		
+		.manche {color:#0099cc;}
+		
+		.tot_volee {color:#ff4444;}
+		
+		.moy {color:#669900;}
+		
+		.nb10 {color:#0099cc;}
+		
+		.nb10p {color:#ff8800;}
+		
+		th, td {
+			padding: 0;
+		}
+		
+		td {
+			text-align:center;
+		}
+		
+		table {
+			border-collapse: collapse;
+			width:100%
+		}
+		
+		table thead tr:first-child th, table tbody tr:first-child td {
+			border-top-style:solid;
+			border-top-width:2px;
+			border-top-color:#909090;
+		}
+		
+		table tbody tr:last-child td {
+			border-bottom-style:solid;
+			border-bottom-width:2px;
+			border-bottom-color:#909090;
+		}
+		
+		tbody tr:nth-child(even) {
+			background: #ddd
+		}
+		
+		h1 {
+			margin-left:16px;
+		}
+    </style>
+  </head>
+  <body>
+    <p>
+      <h1 class="nomjoueur">%%GAME_PLAYER_NAME%%</h1>
+      Le %%GAME_DATE%%<br/>
+      %%GAME_TYPE%% en %%GAME_LOCATION%%<br/>
+      Type de cible : %%GAME_TYPE_CIBLE%%<br/>
+      Distance de la cible : %%GAME_DISTANCE%% m<br/>
+      Taille de la cible : %%GAME_TARGET_SIZE%% cm<br/>
+    </p>
+	
+	<%%END%%>
+	
+	<%%BEGIN(Debut_Manche)%%>
+	
+    <h1 class="manche">Manche %%NO_MANCHE%%</h1>
+    <table>
+		<thead>
+		  <tr>
+			<th rowspan="2">N°</th>
+			<th colspan="%%NBFLECHES%%">Points par flèches</th>
+			<th rowspan="2" class="tot_volee">Total<br/>volée</th>
+			<th rowspan="2">Total<br/>cumulé</th>
+			<th rowspan="2" class="moy">Moyenne</th>
+			<th rowspan="2" class="nb10">Nombre<br/> de 10</th>
+			<th rowspan="2" class="nb10p">Nombre<br/> de 10+</th>
+		  </tr>
+		  <tr>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<%%WHEN_6%%>
+			<th>4</th>
+			<th>5</th>
+			<th>6</th>
+			<%%ENDWHEN_6%%>
+		  </tr>
+	  </thead>
+      
+	  <tbody>
+	  
+	  <%%END%%>
+	  
+	  <%%BEGIN(Ligne_Manche)%%>
+		  <tr>
+		  	<td>%%NO_VOLEE%%</td>
+			<td>%%SCORE_1%%</td>
+			<td>%%SCORE_2%%</td>
+			<td>%%SCORE_3%%</td>
+			<%%WHEN_6%%>
+			<td>%%SCORE_4%%</td>
+			<td>%%SCORE_5%%</td>
+			<td>%%SCORE_6%%</td>
+			<%%ENDWHEN_6%%>
+			<td class="tot_volee">%%TOTAL_VOLEE%%</td>
+			<td>%%TOTAL_CUMULE%%</td>
+			<td class="moy">%%MOY%%</td>
+			<td class="nb10">%%NB10%%</td>
+			<td class="nb10p">%%NB10p%%</td>
+		  </tr>
+		<%%END%%>
+		  
+      <%%BEGIN(Manche_Fin)%%>
+	  </tbody>
+    </table>
+    <%%WHEN_COMPETITION%%>
+		<h3>Total de la manche : %%TOTAL_MANCHE%%</h3>
+	<%%ENDWHEN_COMPETITION%%>
+    <h3>Volée moyenne : %%VOLEE_MOYENNE%%</h3>
+    <h3>Flèche moyenne : %%FLECHE_MOYENNE%%</h3>
+    <%%END%%>
+    
+	<%%BEGIN(Fin_Jeu)%%>
+	
+    <h2>Total de la partie : %%TOTAL_GAME%% points</h2>
+  </body>
+</html>
+	<%%END%%>

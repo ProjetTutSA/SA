@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_photo"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/action_camera"
+        android:title="@string/action_photo" />
+
+    <item
+        android:id="@+id/action_finseance"
+        android:orderInCategory="100"
+        android:icon="@drawable/action_accept"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_finseance"/>
+</menu>
+<!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/menu/in_game.xml -->

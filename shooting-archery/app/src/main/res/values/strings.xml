@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Shooting Archery</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="title_section1">Score récent</string>
+    <string name="title_section2">Nouvelle partie</string>
+    <string name="interieur">Intérieur</string>
+    <string name="exterieur">Extérieur</string>
+    <string name="distance">Distance</string>
+    <string name="nbVolees">"Nombre(s) de volée(s) : "</string>
+    <string name="nbFleches">Nombres de flèches</string>
+    <string name="entrainement">Entrainement</string>
+    <string name="competition">Compétition</string>
+    <string name="title_activity_accueil">Arrow\'s Eye</string>
+    <string name="nouvelle_seance">Nouvelle séance</string>
+    <string name="parcourir">Chercher une partie</string>
+    <string name="distance_en_m">Distance (en m) :</string>
+    <string name="progressbar">progressBar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_config1">Utilisateur (1/3)</string>
+    <string name="title_activity_config2">Type de cible (2/3)</string>
+    <string name="title_activity_config3">Placement, flèches (3/3)</string>
+    <string name="next">Suivant</string>
+    <string name="previous">Précédent</string>
+    <string name="progress">Progress</string>
+    <string name="_0">0</string>
+    <string name="title_activity_in_game">Scores actuels</string>
+    <string name="action_photo">Prendre une photo</string>
+    <string name="action_finseance">Fin de séance</string>
+    <string name="choix_cible">Choix cible :</string>
+    <string name="taille_cible">Taille cible :</string>
+    <string name="cm">cm</string>
+    <string name="exit_question">Quitter ?</string>
+    <string name="sureToQuit">Êtes vous sur de quitter ? La partie ne sera pas sauvegardé.</string>
+    <string name="notif_txt">Touchez pour revenir au tableau des scores.</string>
+    <string name="error">Erreur</string>
+    <string name="no_score_upload">Pas de scores à envoyer. Terminez une séance pour décharger les données.</string>
+    <string name="ok">OK</string>
+    <string name="add_user">Ajouter un utilisateur</string>
+    <string name="title_activity_picture">Lecture de la cible</string>
+    <string name="confirmGameEnd">Êtes-vous sur d\'avoir terminer votre cible ?</string>
+    <string name="checkOngoingGame">Une partie est en cours. Voulez vous la continuer ? Si vous décidez d\'annuler, elle sera effacée.</string>
+    <string name="cancel">Annuler</string>
+    <string name="erreur_supperieur">Veulliez entrer une valeur correcte entre 40 et 200 cm de diamètre</string>
+    <string name="edit">Modifier</string>
+    <string name="valider">Valider</string>
+    <string name="erreur_valeur_nul">Remplissez le champ Taille cible pour continuer</string>
+    <string name="erreur_radio_non_check">Choissisez une cible pour continuer</string>
+    <string name="int_ext_error">Veuillez choisir si vous êtes en intérieur ou en extérieur !</string>
+    <string name="distance_error">La distance doit être différente de 0.</string>
+    <string name="volees_error">Le nombre de volées doit être différent de 0.</string>
+    <string name="manches_error">Le nombre de manches doit être différent de 0.</string>
+    <string name="nbfleche_error">Veuillez saisir le nombre de flèches.</string>
+    <string name="conditions_error">Vous devez choisir les conditions : entrainement ou compétition.</string>
+    <string name="erreur">Erreur</string>
+    <string name="title_activity_manual_score">Score manuel</string>
+    <string name="accueil_libscorerecent">Scores récents</string>
+    <string name="attention">Attention</string>
+    <string name="toomanyplay">Impossible de continuer, vous avez déja joué toutes les manches.</string>
+    <string name="tabbot_totalpartie">Total de la partie</string>
+    <string name="tabtop_numero">N°</string>
+    <string name="tabtop_pointsparfleches">Points par flèches</string>
+    <string name="tabtop_totalvolee">Total\nvolée</string>
+    <string name="tabtop_totalcumule">Total\ncumulé</string>
+    <string name="typeCible">Type de cible :</string>
+    <string name="distanceCible">Distance de la cible :</string>
+    <string name="metresUnite">m</string>
+    <string name="tailleCible">Taille de la cible :</string>
+    <string name="en">en</string>
+    <string name="nbManches">Nombre de manches</string>
+    <string name="total_de_la_manche">Total de la manche</string>
+    <string name="total_entrainement">Total de l\'entrainement</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_sort">Rechercher une partie</string>
+    <string name="title_activity_sort_result">Résultat de recherche</string>
+    <string name="ajouter_une_condition">Ajouter une condition</string>
+    <string name="title_activity_view_game">Afficher une partie</string>
+    <string name="share">Partager</string>
+    <string name="delete">Supprimer</string>
+    <string name="save">Enregistrer</string>
+    <string name="gamereport">Rapport de partie</string>
+    <string name="points">points</string>
+    <string name="description">Description</string>
+    <string name="typecible">Type de cible</string>
+    <string name="blason">Blason</string>
+    <string name="trispot">Trispot</string>
+    <string name="manche">Manche</string>
+    <string name="delete_game">Supprimer la partie</string>
+    <string name="delete_game_confirm">Êtes-vous sûr de supprimer la partie ? Cette opération ne peut être annulé.</string>
+    <string name="saved_file_message">Le fichier %1$s a été enregistré dans le dossier %2$s.\n\nVous pouvez le récuperer en connectant votre appareil à un ordinateur.</string>
+    <string name="no_user_inside">Pas d\'utilisateur enregistré, veuillez renseigner votre identité.</string>
+    <string name="name_not_be_null">Nom ne doit pas être vide !</string>
+    <string name="prenom_not_null">Prenom ne doit pas être vide !</string>
+    <string name="have_to_choose_a_size">Vous devez choisir un diamètre de cible dans la liste.</string>
+    <string name="have_to_fill_fields">Vous devez remplir les champs !</string>
+    <string name="user_has_been_deleted">L\'utilisateur a bien été supprimé !</string>
+    <string name="delete_user">Supprimer un utilisateur</string>
+    <string name="have_to_select_user">Veuillez saisir un utilisateur !</string>
+    <string name="has_to_fill_criterias">Vous devez remplir tous les critères choisis.</string>
+    <string name="choose_criteria">Choix des critères</string>
+    <string name="mofidier_un_utilisateur">Mofidier un utilisateur</string>
+    <string name="no_result">Aucun résultat n\'a été trouvé.</string>
+    <string name="nombre_10">Nombre\nde 10</string>
+    <string name="nombre_10p">Nombre\nde 10+</string>
+    <string name="edit_user">Modifier un utilisateur...</string>
+    <string name="reset_db">Réinitialiser la base de données</string>
+    <string name="data">Données</string>
+    <string name="show_logo">Afficher le logo de l\'IUT-BM</string>
+    <string name="about">A propos</string>
+    <string name="sinterface">Interface</string>
+    <string name="moyenne_manche">Volée moyenne</string>
+    <string name="nb_10p_total">Nombre de 10+/10</string>
+
+    <color name="color_slashScreen">#e5e5e5</color>
+    <color name="titre1">#ff0099cc</color>
+    <color name="date">#ff33b5e5</color>
+    <color name="nb10p">#ffff8800</color>
+    <color name="moyenne">#ff669900</color>
+    <color name="totalvolee">#ffff4444</color>
+    <string-array name="colonnes_10_10p">
+        <item >Total par volée</item>
+        <item >Total cumulé</item>
+    </string-array>
+    <string-array name="colonnes_10_10p_values">
+        <item >per_row</item>
+        <item >per_game</item>
+    </string-array>
+        <string name="name_no_space">Le nom ne peut pas contenir d\'espace.</string>
+        <string name="firstname_no_space">Le prenom ne peut pas contenir d\'espace.</string>
+        <string name="fleche_moyenne">Flèche moyenne</string>
+    
+</resources>

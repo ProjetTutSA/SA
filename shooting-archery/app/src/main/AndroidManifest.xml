@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fr.iutbm.lpro.tiralarc"
+    android:versionCode="3"
+    android:versionName="0.1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="20" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/action_settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.AccueilActivity" />
+        </activity>
+        <activity android:name=".AccueilActivity" >
+        </activity>
+        <activity
+            android:name=".Config3Activity"
+            android:label="@string/title_activity_config3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.Config2Activity" />
+        </activity>
+        <activity
+            android:name=".Config1Activity"
+            android:label="@string/title_activity_config1" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.AccueilActivity" />
+        </activity>
+        <activity
+            android:name=".Config2Activity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_config2"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.Config1Activity" />
+        </activity>
+        <activity
+            android:name=".InGameActivity"
+            android:label="@string/title_activity_in_game" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.AccueilActivity" />
+        </activity>
+        <activity
+            android:name=".PictureActivity"
+            android:label="@string/title_activity_picture"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.InGameActivity" />
+        </activity>
+        <activity
+            android:name=".ManualScoreActivity"
+            android:label="@string/title_activity_manual_score" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.InGameActivity" />
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SortActivity"
+            android:label="@string/parcourir" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.AccueilActivity" />
+        </activity>
+        <activity
+            android:name=".SortResultActivity"
+            android:label="@string/title_activity_sort_result" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.SortActivity" />
+        </activity>
+        <activity
+            android:name=".ViewGameActivity"
+            android:label="@string/title_activity_view_game" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.SortResultActivity" />
+        </activity>
+    </application>
+
+</manifest>
