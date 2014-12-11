@@ -98,21 +98,7 @@
         android:orientation="vertical"
         android:weightSum="100" >
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight=".125"
-            android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/manscore_buttonScore10plus"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:background="@android:color/holo_orange_light"
-                android:text="10+" />
-
-        </LinearLayout>
 
 		<TableLayout
 		    android:id="@+id/tabButton"
@@ -230,20 +216,22 @@
 			    android:layout_margin="0dip"
 			    android:layout_weight="50" >
 
+
 			<Button
 			    android:id="@+id/manscore_buttonScore2"
 			    android:layout_width="0dip"
 			    android:layout_height="fill_parent"
 			    android:layout_margin="4dp"
-			    android:background="@android:color/white"
+			    android:background="@drawable/button_border"
 			    android:text="2" />
-				
+
+
 			<Button
 			    android:id="@+id/manscore_buttonScore1"
 			    android:layout_width="0dip"
 			    android:layout_height="fill_parent"
 			    android:layout_margin="4dp"
-			    android:background="@android:color/white"
+			    android:background="@drawable/button_border"
 			    android:text="1" />
 
 			</TableRow>
@@ -256,14 +244,18 @@
 		    android:layout_height="wrap_content"
 		    android:layout_margin="4dp"
 		    android:layout_weight=".125"
-		    android:orientation="vertical" >
+		    android:orientation="vertical"
+            >
 
-		    <Button
+
+
+            <Button
 		        android:id="@+id/manscore_buttonScore0"
 		        android:layout_width="fill_parent"
 		        android:layout_height="wrap_content"
-		        android:background="@android:color/white"
+		        android:background="@drawable/button_border"
 		        android:text="Manqué" />
+
 		</LinearLayout>
 		
     </LinearLayout>

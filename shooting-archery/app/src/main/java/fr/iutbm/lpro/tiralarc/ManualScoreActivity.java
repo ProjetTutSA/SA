@@ -85,7 +85,7 @@ public class ManualScoreActivity extends Activity implements OnFocusChangeListen
 		scoreBtns.add((Button) findViewById(R.id.manscore_buttonScore8));
 		scoreBtns.add((Button) findViewById(R.id.manscore_buttonScore9));
 		scoreBtns.add((Button) findViewById(R.id.manscore_buttonScore10));
-		scoreBtns.add((Button) findViewById(R.id.manscore_buttonScore10plus));
+		//scoreBtns.add((Button) findViewById(R.id.manscore_buttonScore10plus));
 		
 		OnClickListener ocl = new View.OnClickListener() {
 			@Override

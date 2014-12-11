@@ -102,7 +102,7 @@
     <string name="mofidier_un_utilisateur">Mofidier un utilisateur</string>
     <string name="no_result">Aucun résultat n\'a été trouvé.</string>
     <string name="nombre_10">Nombre\nde 10</string>
-    <string name="nombre_10p">Nombre\nde 10+</string>
+    <string name="nombre_9">Nombre\nde 9</string>
     <string name="edit_user">Modifier un utilisateur...</string>
     <string name="reset_db">Réinitialiser la base de données</string>
     <string name="data">Données</string>
@@ -110,12 +110,12 @@
     <string name="about">A propos</string>
     <string name="sinterface">Interface</string>
     <string name="moyenne_manche">Volée moyenne</string>
-    <string name="nb_10p_total">Nombre de 10+/10</string>
+    <string name="nb_10p_total">Nombre de 10/9</string>
 
     <color name="color_slashScreen">#e5e5e5</color>
     <color name="titre1">#ff0099cc</color>
     <color name="date">#ff33b5e5</color>
-    <color name="nb10p">#ffff8800</color>
+    <color name="nb9">#ffff8800</color>
     <color name="moyenne">#ff669900</color>
     <color name="totalvolee">#ffff4444</color>
     <string-array name="colonnes_10_10p">
