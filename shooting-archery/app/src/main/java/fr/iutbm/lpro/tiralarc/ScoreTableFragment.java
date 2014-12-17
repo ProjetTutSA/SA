@@ -183,9 +183,9 @@ public class ScoreTableFragment extends Fragment {
 		int scoreManche = 0;
 		
 		int nb10_total = 0;
-		int nb10p_total = 0;
+		int nb9_total = 0;
 		int nb10 = 0;
-		int nb10p = 0;
+		int nb9 = 0;
 		
 		for (int i=0;i<tirs.size();i++) {
 			Tirer tirer = tirs.get(i);
@@ -198,8 +198,8 @@ public class ScoreTableFragment extends Fragment {
 			scoreTotal += getRealScore(tirer.getScore());
 			if (tirer.getScore() == 10) {
 				nb10++;
-			} else if (tirer.getScore() == 11) {
-				nb10p++;
+			} else if (tirer.getScore() == 9) {
+				nb9++;
 			}
 			
 			if (tirer.getOrderLancer() == partie.getNbFleches()) {
@@ -209,16 +209,16 @@ public class ScoreTableFragment extends Fragment {
 				float currentMoyenne = (float) scoreVolee/partie.getNbFleches();
 				((TextView) ligne.findViewById(R.id.tabmid_moy)).setText(String.format("%.2f", currentMoyenne));
 				((TextView) ligne.findViewById(R.id.tab_nb10)).setText(String.valueOf(nb10));
-				((TextView) ligne.findViewById(R.id.tab_nb10p)).setText(String.valueOf(nb10p));
+				((TextView) ligne.findViewById(R.id.tab_nb9)).setText(String.valueOf(nb9));
 				
 				scoreVolee = 0;
 				
 				nb10_total += nb10;
-				nb10p_total += nb10p;
+				nb9_total += nb9;
 				
 				if (noCumul10) {
 					nb10 = 0;
-					nb10p = 0;
+					nb9 = 0;
 				}
 				
 				if (tirer.getNbVolee() == partie.getNbVolees() || i == tirs.size() - 1) {
@@ -229,11 +229,13 @@ public class ScoreTableFragment extends Fragment {
 					
 					((TextView) ligneManche.findViewById(R.id.tabbot_flemoy)).setText(String.format("%.2f",(float) scoreManche/(tirer.getNbVolee()*partie.getNbFleches())));
 					((TextView) ligneManche.findViewById(R.id.tabbot_moy)).setText(String.format("%.2f",(float) scoreManche/tirer.getNbVolee()));
-					((TextView) ligneManche.findViewById(R.id.tabbot_10p)).setText(String.valueOf(nb10p_total) + "/" +String.valueOf(nb10_total));
-					
+					((TextView) ligneManche.findViewById(R.id.tabbot_9)).setText(String.valueOf(nb10_total) + "/" +String.valueOf(nb9_total));
+
 					scoreManche = 0;
+                    nb10_total = 0;
+                    nb9_total = 0;
 				}
-				
+
 			}
 		}
 		
@@ -245,8 +247,8 @@ public class ScoreTableFragment extends Fragment {
 	private CharSequence getScoreString(int score) {
 		if (score == 0) {
 			return "M";
-		} else if (score == 11) {
-			return "10+";
+		} else if (score == 10) {
+			return "10";
 		} else {
 			return String.valueOf(score);
 		}

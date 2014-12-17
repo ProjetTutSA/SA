@@ -6,7 +6,7 @@
         <Preference android:title="@string/reset_db" android:key="reset_db"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="Partie">
-        <ListPreference android:entryValues="@array/colonnes_10_10p_values" android:entries="@array/colonnes_10_10p" android:title="Colonnes 10 et 10+" android:key="col_1010p" android:defaultValue="per_row"/>
+        <ListPreference android:entryValues="@array/colonnes_10_10p_values" android:entries="@array/colonnes_10_10p" android:title="Colonnes 10 et 9" android:key="col_1010p" android:defaultValue="per_row"/>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/about">
         <Preference android:title="@string/app_name" android:key="about_pref"/>
