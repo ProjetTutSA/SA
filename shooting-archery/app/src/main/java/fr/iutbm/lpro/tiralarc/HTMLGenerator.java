@@ -26,7 +26,7 @@ public class HTMLGenerator {
 
 	private int totalPartie;
 	private int nb10;
-	private int nb10p;
+	private int nb9;
 	private boolean noCalcul = false;
 	private boolean noCumul10;
 	private String template;
@@ -90,14 +90,14 @@ public class HTMLGenerator {
 
 				if (noCumul10) {
 					nb10 = 0;
-					nb10p = 0;
+					nb9 = 0;
 				}
 				
 				for(int noFleche=1;noFleche<=partie.getNbFleches();noFleche++) {
 					try {
 						int score = tirs.get(noFleche-1).getScore();
-						if (score == 11) {
-							nb10p++;
+						if (score == 9) {
+							nb9++;
 						} else if (score == 10) {
 							nb10++;
 						}
@@ -122,7 +122,7 @@ public class HTMLGenerator {
 				tableVolee = tableVolee.replace("%%TOTAL_VOLEE%%", String.valueOf(totalVolee));
 				tableVolee = tableVolee.replace("%%TOTAL_CUMULE%%", String.valueOf(totalPartie));
 				tableVolee = tableVolee.replace("%%NB10%%", String.valueOf(nb10));
-				tableVolee = tableVolee.replace("%%NB10p%%", String.valueOf(nb10p));
+				tableVolee = tableVolee.replace("%%NB10p%%", String.valueOf(nb9));
 				manches.append(tableVolee);
 			}
 
@@ -203,15 +203,15 @@ public class HTMLGenerator {
 			return "M";
 		} else if (score == 10) {
 			return "10";
-		} else if (score == 11) {
-			return "10+";
+		} else if (score == 9) {
+			return "9";
 		} else {
 			return String.valueOf(score);
 		}
 	}
 
 	private int getRealScore(int score) {
-		return score==11?10:score;
+		return score==9?10:score;
 	}
 
 	public String getHTML() {
