@@ -102,7 +102,7 @@
     <string name="mofidier_un_utilisateur">Mofidier un utilisateur</string>
     <string name="no_result">Aucun résultat n\'a été trouvé.</string>
     <string name="nombre_10">Nombre\nde 10</string>
-    <string name="nombre_10p">Nombre\nde 10+</string>
+    <string name="nombre_9">Nombre\nde 9</string>
     <string name="edit_user">Modifier un utilisateur...</string>
     <string name="reset_db">Réinitialiser la base de données</string>
     <string name="data">Données</string>
@@ -110,24 +110,46 @@
     <string name="about">A propos</string>
     <string name="sinterface">Interface</string>
     <string name="moyenne_manche">Volée moyenne</string>
-    <string name="nb_10p_total">Nombre de 10+/10</string>
+    <string name="nb_10p_total">Nombre de 10/9</string>
+    <!-- nom du button qui est dans mes arcs -->
+    <string name="mes_arcs"></string>
+    <string name="no_arc">Aucun arc pour le moment </string>
+
+
+    <!-- accueil activity -->
+    <string name="nouveau">Nouveau</string>
+    <string name="score">Score</string>
+    <string name="mes_arcs_accueil">Mes arcs</string>
+    <string name="conseil">Conseil</string>
 
     <color name="color_slashScreen">#e5e5e5</color>
     <color name="titre1">#ff0099cc</color>
     <color name="date">#ff33b5e5</color>
-    <color name="nb10p">#ffff8800</color>
+    <color name="nb9">#ffff8800</color>
     <color name="moyenne">#ff669900</color>
     <color name="totalvolee">#ffff4444</color>
+    <!-- color -->
+    <color name="color_button">#2C2C2C</color>
+    <color name="color_button_text">#45BBE6</color>
+
+
     <string-array name="colonnes_10_10p">
-        <item >Total par volée</item>
-        <item >Total cumulé</item>
+        <item>Total par volée</item>
+        <item>Total cumulé</item>
     </string-array>
     <string-array name="colonnes_10_10p_values">
-        <item >per_row</item>
-        <item >per_game</item>
+        <item>per_row</item>
+        <item>per_game</item>
     </string-array>
-        <string name="name_no_space">Le nom ne peut pas contenir d\'espace.</string>
-        <string name="firstname_no_space">Le prenom ne peut pas contenir d\'espace.</string>
-        <string name="fleche_moyenne">Flèche moyenne</string>
-    
+
+    <string name="name_no_space">Le nom ne peut pas contenir d\'espace.</string>
+    <string name="firstname_no_space">Le prenom ne peut pas contenir d\'espace.</string>
+    <string name="fleche_moyenne">Flèche moyenne</string>
+    <string name="title_activity_ffff">ffff</string>
+    <string name="title_activity_mesarcs_activity">mesarcs_activity</string>
+    <string name="title_activity_detailarc_activity">detailarc_activity</string>
+
 </resources>
+
+
+

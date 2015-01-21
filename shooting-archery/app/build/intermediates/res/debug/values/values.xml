@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string-array name="colonnes_10_10p">
@@ -16,15 +16,19 @@
     <color name="color_slashScreen">#e5e5e5</color>
     <color name="date">#ff33b5e5</color>
     <color name="moyenne">#ff669900</color>
-    <color name="nb10p">#ffff8800</color>
+    <color name="nb9">#ffff8800</color>
     <color name="titre1">#ff0099cc</color>
     <color name="totalvolee">#ffff4444</color>
-    <!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/values/ids.xml -->
+    <eat-comment />
+
+    <item name="accueil_noDataText" type="id"/>
+    <!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string name="_0">0</string>
@@ -87,14 +91,14 @@
     <string name="nbFleches">Nombres de flèches</string>
     <string name="nbManches">Nombre de manches</string>
     <string name="nbVolees">"Nombre(s) de volée(s) : "</string>
-    <string name="nb_10p_total">Nombre de 10+/10</string>
+    <string name="nb_10p_total">Nombre de 10/9</string>
     <string name="nbfleche_error">Veuillez saisir le nombre de flèches.</string>
     <string name="next">Suivant</string>
     <string name="no_result">Aucun résultat n\'a été trouvé.</string>
     <string name="no_score_upload">Pas de scores à envoyer. Terminez une séance pour décharger les données.</string>
     <string name="no_user_inside">Pas d\'utilisateur enregistré, veuillez renseigner votre identité.</string>
     <string name="nombre_10">Nombre\nde 10</string>
-    <string name="nombre_10p">Nombre\nde 10+</string>
+    <string name="nombre_9">Nombre\nde 9</string>
     <string name="notif_txt">Touchez pour revenir au tableau des scores.</string>
     <string name="nouvelle_seance">Nouvelle séance</string>
     <string name="ok">OK</string>
@@ -122,8 +126,11 @@
     <string name="title_activity_config1">Utilisateur (1/3)</string>
     <string name="title_activity_config2">Type de cible (2/3)</string>
     <string name="title_activity_config3">Placement, flèches (3/3)</string>
+    <string name="title_activity_detailarc_activity">detailarc_activity</string>
+    <string name="title_activity_ffff">ffff</string>
     <string name="title_activity_in_game">Scores actuels</string>
     <string name="title_activity_manual_score">Score manuel</string>
+    <string name="title_activity_mesarcs_activity">mesarcs_activity</string>
     <string name="title_activity_picture">Lecture de la cible</string>
     <string name="title_activity_sort">Rechercher une partie</string>
     <string name="title_activity_sort_result">Résultat de recherche</string>
@@ -140,7 +147,7 @@
     <string name="user_has_been_deleted">L\'utilisateur a bien été supprimé !</string>
     <string name="valider">Valider</string>
     <string name="volees_error">Le nombre de volées doit être différent de 0.</string>
-    <!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="AppBaseTheme" parent="android:Theme.Light">

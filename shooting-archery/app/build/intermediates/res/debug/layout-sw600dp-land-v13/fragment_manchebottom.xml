@@ -109,7 +109,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:id="@+id/tabbot_10p"
+                    android:id="@+id/tabbot_9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight=".33"
@@ -121,4 +121,4 @@
 
     </LinearLayout>
 
-</LinearLayout><!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/layout-sw600dp-land/fragment_manchebottom.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/layout-sw600dp-land/fragment_manchebottom.xml -->

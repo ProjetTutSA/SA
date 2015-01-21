@@ -7,7 +7,7 @@
         android:showAsAction="always"
         android:title="@string/nouvelle_seance">
     </item>
-    
+
     <item
         android:id="@+id/action_search"
         android:orderInCategory="100"
@@ -15,7 +15,7 @@
         android:showAsAction="always"
         android:title="@string/parcourir">
     </item>
-    
+
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
@@ -23,5 +23,6 @@
         android:showAsAction="always"
         android:title="@string/action_settings">
     </item>
-    
+
+
 </menu>

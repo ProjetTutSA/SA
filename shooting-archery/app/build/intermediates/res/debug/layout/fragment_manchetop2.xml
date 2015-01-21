@@ -144,15 +144,16 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/nombre_10p"
-                android:textColor="@color/nb10p" />
-        </LinearLayout>
+                android:text="@string/nombre_9"
 
+            android:textColor="@color/nb9" />
     </LinearLayout>
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="2dip"
-        android:background="#FF909090" />
+</LinearLayout>
 
-</LinearLayout><!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/layout/fragment_manchetop2.xml -->
+<View
+    android:layout_width="wrap_content"
+    android:layout_height="2dip"
+    android:background="#FF909090" />
+
+</LinearLayout><!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/layout/fragment_manchetop2.xml -->

@@ -39,21 +39,6 @@
                 android:layout_marginTop="30dp"
                 android:layout_weight="100" >
 
-                <ImageView
-                    android:id="@+id/config2_cibleImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="50"
-                    android:src="@drawable/classique" />
-
-                <ImageView
-                    android:id="@+id/config2_cibleTrispotImg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_weight="50"
-                    android:src="@drawable/trispot" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -75,23 +60,11 @@
                         android:layout_weight=".2" >
                     </LinearLayout>
 
-                    <RadioButton
-                        android:id="@+id/config2_radioCibleBlason"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".3" />
-
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight=".2" >
                     </LinearLayout>
-
-                    <RadioButton
-                        android:id="@+id/config2_radioCibleTrispot"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".3" />
 
                 </RadioGroup>
 
@@ -106,36 +79,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp" >
 
-                <TextView
-                    android:id="@+id/config2_libtaillecible"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:text="@string/taille_cible"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textStyle="bold" />
-
-                <Spinner
-                    android:id="@+id/config2_spinnertaille"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".5" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <TextView
-                    android:id="@+id/config3_libConditions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="Conditions : "
-					android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textStyle="bold" />
             </LinearLayout>
             
             <LinearLayout
@@ -151,20 +100,6 @@
                     android:orientation="horizontal"
                     android:paddingLeft="15dp" >
 
-                    <RadioButton
-                        android:id="@+id/config2_radioCompetition"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:checked="false"
-                        android:text="Competition" />
-
-                    <RadioButton
-                        android:id="@+id/config2_radioEntrainement"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
-                        android:text="Entrainement" />
                 </RadioGroup>
             </LinearLayout>
             

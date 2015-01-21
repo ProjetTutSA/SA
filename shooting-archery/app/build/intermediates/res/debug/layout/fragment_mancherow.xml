@@ -105,14 +105,14 @@
             android:textColor="@color/titre1" />
 
         <TextView
-            android:id="@+id/tab_nb10p"
+            android:id="@+id/tab_nb9"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:textColor="@color/nb10p" />
+            android:textColor="@color/nb9" />
 
     </LinearLayout>
 
 </LinearLayout>
-<!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/layout/fragment_mancherow.xml -->
+<!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/layout/fragment_mancherow.xml -->

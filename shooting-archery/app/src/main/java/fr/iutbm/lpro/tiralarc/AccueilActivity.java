@@ -17,6 +17,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class AccueilActivity extends Activity {
@@ -32,9 +33,9 @@ public class AccueilActivity extends Activity {
 		db = new DBHelper(this);
 		
 		//Créer les fragments une seule fois
-		if (savedInstanceState == null) {
-			makeLastGamesFragments();
-		}
+//		if (savedInstanceState == null) {
+//			makeLastGamesFragments();
+//		}
 		
 		checkOngoingGame();
 	}
@@ -53,31 +54,31 @@ public class AccueilActivity extends Activity {
 		} while (fragment != null);
 	}
 
-	private void makeLastGamesFragments() {
-		ArrayList<Integer> parties = db.getLastParties();
-		if (parties.size() == 0) {
-			((TextView) findViewById(R.id.accueil_noDataText)).setVisibility(View.VISIBLE);
-			return;
-		}
-		
-		
-		FragmentManager fragmentManager = getFragmentManager();
-		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-		
-		for (int i=0;i<parties.size();i++) {
-			ScoreTableFragment stf = new ScoreTableFragment();
-			Bundle arguments = new Bundle();
-			arguments.putInt("idPartie", parties.get(i));
-			stf.setArguments(arguments);
-			fragmentTransaction.add(R.id.accueil_fragments, stf, "stf" + i);
-			
-			if (i != parties.size() - 1) {
-				SeparatorFragment sf = new SeparatorFragment();
-				fragmentTransaction.add(R.id.accueil_fragments, sf);
-			}
-		}
-		fragmentTransaction.commit();
-	}
+//	private void makeLastGamesFragments() {
+//		ArrayList<Integer> parties = db.getLastParties();
+//		if (parties.size() == 0) {
+//			((TextView) findViewById(R.id.accueil_noDataText)).setVisibility(View.VISIBLE);
+//			return;
+//		}
+//
+//
+//		FragmentManager fragmentManager = getFragmentManager();
+//		FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//		for (int i=0;i<parties.size();i++) {
+//			ScoreTableFragment stf = new ScoreTableFragment();
+//			Bundle arguments = new Bundle();
+//			arguments.putInt("idPartie", parties.get(i));
+//			stf.setArguments(arguments);
+//			fragmentTransaction.add(R.id.accueil_fragments, stf, "stf" + i);
+//
+//			if (i != parties.size() - 1) {
+//				SeparatorFragment sf = new SeparatorFragment();
+//				fragmentTransaction.add(R.id.accueil_fragments, sf);
+//			}
+//		}
+//		fragmentTransaction.commit();
+//	}
 
 	private void checkOngoingGame() 
 	{
@@ -149,5 +150,8 @@ public class AccueilActivity extends Activity {
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-
+        public void buttonOnClick(View v){
+           Button monarc = (Button) v;
+            startActivity(new Intent(this,mesarcs_activity.class));
+        }
 }

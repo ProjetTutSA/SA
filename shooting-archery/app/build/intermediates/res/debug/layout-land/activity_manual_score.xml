@@ -104,20 +104,7 @@
             android:orientation="vertical"
             android:weightSum="100" >
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight=".125"
-                android:orientation="vertical" >
 
-                <Button
-                    android:id="@+id/manscore_buttonScore10plus"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:background="@android:color/holo_orange_light"
-                    android:text="10+" />
-            </LinearLayout>
 
             <TableLayout
                 android:id="@+id/tabButton"
@@ -236,7 +223,7 @@
                         android:layout_width="0dip"
                         android:layout_height="fill_parent"
                         android:layout_margin="4dp"
-                        android:background="@android:color/white"
+                        android:background="@drawable/button_border"
                         android:text="2" />
 
                     <Button
@@ -244,7 +231,7 @@
                         android:layout_width="0dip"
                         android:layout_height="fill_parent"
                         android:layout_margin="4dp"
-                        android:background="@android:color/white"
+                        android:background="@drawable/button_border"
                         android:text="1" />
                 </TableRow>
             </TableLayout>
@@ -255,17 +242,18 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight=".125"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                >
 
                 <Button
                     android:id="@+id/manscore_buttonScore0"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/white"
+                    android:background="@drawable/button_border"
                     android:text="Manqué" />
             </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
 
-</LinearLayout><!-- From: file:/C:/Users/Utilisateur/AndroidstudioProjects/shooting-archery/app/src/main/res/layout-land/activity_manual_score.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/layout-land/activity_manual_score.xml -->
