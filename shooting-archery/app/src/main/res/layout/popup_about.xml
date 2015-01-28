@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:text="Application réalisée dans le cadre d&apos;un projet tuteuré, par les étudiants de license professionelle TeProw de l&apos;IUT de Belfort en 2013-2014." />
+        android:text="Application réalisée dans le cadre d&apos;un projet tuteuré, par les étudiants de license professionelle TeProw de l&apos;IUT de Belfort en 2014-2015." />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
                 android:gravity="center"
-                android:text="GILLET Yohan" />
+                android:text="MISSLIN Geoffrey" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
                 android:gravity="center"
-                android:text="NOWINSKI David" />
+                android:text="BANSE Clément" />
         </LinearLayout>
 
         <LinearLayout
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
                 android:gravity="center"
-                android:text="POULIN Elodie" />
+                android:text="VANARDOIS Romain" />
 
             <TextView
                 android:id="@+id/TextView02"
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
                 android:gravity="center"
-                android:text="RUPERT Alexandre" />
+                android:text="CHERKAOUI Iliass" />
         </LinearLayout>
     </LinearLayout>
 

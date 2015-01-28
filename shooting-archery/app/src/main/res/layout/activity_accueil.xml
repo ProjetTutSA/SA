@@ -3,6 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
 
+
     <TextView
         android:id="@+id/accueil_libscorerecent"
         android:layout_width="wrap_content"
@@ -18,6 +19,57 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center|start|top"
+            android:orientation="vertical" >
+            <Button
+                android:id="@+id/nouveau"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_60"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_4"
+                android:layout_marginTop="@dimen/size_4"
+                android:background="@color/color_button"
+                android:text="@string/nouveau"
+                android:textColor="@color/color_button_text"
+                android:textColorHint="@color/color_button_text"
+                android:textSize="@dimen/size_32"/>
+            <Button
+                android:id="@+id/score"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_60"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/size_4"
+                android:background="@color/color_button"
+                android:text="@string/score"
+                android:textColor="@color/color_button_text"
+                android:textColorHint="@color/color_button_text"
+                android:textSize="@dimen/size_32" />
+            <Button
+                android:id="@+id/monarc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_60"
+                android:layout_marginBottom="@dimen/size_4"
+                android:background="@color/color_button"
+                android:onClick="buttonOnClick"
+                android:text="@string/mes_arcs_accueil"
+                android:textColor="@color/color_button_text"
+                android:textColorHint="@color/color_button_text"
+                android:textSize="@dimen/size_32" />
+            <Button
+                android:id="@+id/conseil"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_60"
+                android:layout_marginBottom="@dimen/size_4"
+                android:background="@color/color_button"
+                android:text="@string/conseil"
+                android:textColor="@color/color_button_text"
+                android:textColorHint="@color/color_button_text"
+                android:textSize="@dimen/size_32" />
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/accueil_noDataText"
@@ -34,7 +86,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/accueil_libscorerecent"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="250dp"
     	android:paddingLeft="@dimen/activity_horizontal_margin"
     	android:paddingRight="@dimen/activity_horizontal_margin"
         android:orientation="vertical">

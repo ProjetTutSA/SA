@@ -105,6 +105,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.iutbm.lpro.tiralarc.SortResultActivity" />
         </activity>
+        <activity
+            android:name=".ArcActivity"
+            android:label="@string/title_activity_arc" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.AcceuilActivity" />
+        </activity>
     </application>
 
 </manifest>

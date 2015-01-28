@@ -332,8 +332,9 @@ public class Config3Activity extends Activity  {
     			sp.getInt("progressVolee", 0), //nbVolees
     			(sp.getBoolean("RadioFleche3", true))?3:6, //nbFleches
     			sp.getBoolean("RadioCompetition", false),//competition
-    			sp.getBoolean("RadioExterieur", true),
-    			sp.getInt("idDiametre",0))//exterieur
+    			sp.getBoolean("RadioExterieur", true),//exterieur
+    			sp.getInt("idDiametre",0),
+                sp.getString("NomArc", "test"))
     			);
     	sp.edit().putInt("idPartie", idPartie).commit();
 	}

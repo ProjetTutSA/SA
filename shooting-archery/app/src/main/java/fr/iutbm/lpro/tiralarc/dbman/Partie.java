@@ -1,5 +1,6 @@
 package fr.iutbm.lpro.tiralarc.dbman;
 
+
 import java.util.Date;
 
 public class Partie {
@@ -16,11 +17,12 @@ public class Partie {
 	private int nbFleches;
 	private boolean competition;
 	private int idDiametre;
+    private String NomArc;
 	
 	public Partie(int idPartie, int idUtilisateur, boolean partieFini,
 			int idCible, int distanceCible,  Date datePartie,
 			int nbManches, int nbVolees, int nbFleches, 
-			boolean comp_entrain, boolean ext_int, int idDiametre) {
+			boolean comp_entrain, boolean ext_int, int idDiametre, String NomArc) {
 		super();
 		this.idPartie = idPartie;
 		this.idUtilisateur = idUtilisateur;
@@ -34,6 +36,7 @@ public class Partie {
 		this.nbFleches = nbFleches;
 		this.competition = comp_entrain;
 		this.idDiametre = idDiametre;
+        this.NomArc = NomArc;
 	}
 
 	public int getIdPartie() {
@@ -114,5 +117,8 @@ public class Partie {
 	public int getIdDiametre() {
 		return idDiametre;
 	}
+    public String getNomArc() {
+        return NomArc;
+    }
 	
 }

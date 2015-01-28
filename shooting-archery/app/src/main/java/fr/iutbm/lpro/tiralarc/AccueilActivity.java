@@ -13,16 +13,21 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.DialogInterface.OnClickListener;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AccueilActivity extends Activity {
 
 	private DBHelper db;
 	private int idPartieResumable;
+    Button btnnew;
+    Button btnscore;
+    Button btnarc;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +40,15 @@ public class AccueilActivity extends Activity {
 		if (savedInstanceState == null) {
 			makeLastGamesFragments();
 		}
-		
+        btnnew = (Button)  findViewById(R.id.nouveau);
+        btnscore = (Button) findViewById(R.id.score);
+        btnarc = (Button) findViewById(R.id.monarc);
+        btnnew.setOnClickListener(handleClick);
+        btnscore.setOnClickListener(handleClick);
+        btnarc.setOnClickListener(handleClick);
+
+
+
 		checkOngoingGame();
 	}
 	
@@ -90,7 +103,7 @@ public class AccueilActivity extends Activity {
 	        .setMessage(R.string.checkOngoingGame)
 	        .setIcon(R.drawable.warning_dark)
 	        .setCancelable(false)
-	        .setNegativeButton(android.R.string.no, new OnClickListener() {
+	        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface arg0, int arg1) {
 					db.supprimerPartie(idPartieResumable);
 					idPartieResumable = 0;
@@ -103,7 +116,7 @@ public class AccueilActivity extends Activity {
 				}
 
 			})
-	        .setPositiveButton(android.R.string.yes, new OnClickListener() {
+	        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 	            public void onClick(DialogInterface arg0, int arg1) {
 	            	resumeOngoingGame();
 	            	arg0.dismiss();
@@ -132,7 +145,7 @@ public class AccueilActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle presses on the action bar items
 	    switch (item.getItemId()) {
-	    	case R.id.action_search:
+	    	/*case R.id.action_search:
 	    		Intent intent3 = new Intent(this, SortActivity.class);
 	    		startActivity(intent3);
 	    		return true;
@@ -140,7 +153,7 @@ public class AccueilActivity extends Activity {
 	        case R.id.action_newgame:
 	        	Intent intent = new Intent(this, Config1Activity.class);
             	startActivity(intent);
-	            return true;
+	            return true;*/
 	        case R.id.action_settings:
 	        	Intent intent2 = new Intent(this, SettingsActivity.class);
             	startActivity(intent2);
@@ -150,4 +163,31 @@ public class AccueilActivity extends Activity {
 	    }
 	}
 
-}
+    protected View.OnClickListener handleClick = new View.OnClickListener() {
+        public void onClick(View view) {
+            switch (view.getId()) {
+                case R.id.nouveau:
+                    Intent intent = new Intent(view.getContext(), Config1Activity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.score:
+                    Intent intent2 = new Intent(view.getContext(), SortActivity.class);
+                    startActivity(intent2);
+                    break;
+                case R.id.monarc:
+                    Intent intent3 = new Intent(view.getContext(), ArcActivity.class);
+                    startActivity(intent3);
+                    break;
+                case R.id.conseil:
+                    /*Intent intent4 = new Intent(view.getContext(), SortActivity.class);
+                    startActivity(intent4);
+                    break;*/
+
+            }
+        }
+    };
+
+   }
+
+
+

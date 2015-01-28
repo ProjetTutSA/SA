@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".test" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/arc_noDataText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="Aucun arc à afficher"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/holo_blue_dark" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/arc_listetotal"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/arc_fragments"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/arc1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="0.04"
+        android:background="#2C2C2C"
+        android:text="ARC 1"
+        android:textColor="#45BBE6"
+        android:textColorHint="#45BBE6"
+        android:textSize="32dp" />
+</LinearLayout>

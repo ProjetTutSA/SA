@@ -12,7 +12,7 @@
     <string name="nbFleches">Nombres de flèches</string>
     <string name="entrainement">Entrainement</string>
     <string name="competition">Compétition</string>
-    <string name="title_activity_accueil">Arrow\'s Eye</string>
+    <string name="title_activity_accueil">Shooting Archery</string>
     <string name="nouvelle_seance">Nouvelle séance</string>
     <string name="parcourir">Chercher une partie</string>
     <string name="distance_en_m">Distance (en m) :</string>
@@ -92,10 +92,12 @@
     <string name="no_user_inside">Pas d\'utilisateur enregistré, veuillez renseigner votre identité.</string>
     <string name="name_not_be_null">Nom ne doit pas être vide !</string>
     <string name="prenom_not_null">Prenom ne doit pas être vide !</string>
+    <string name="nom_arc_not_null">Le de l\'arc ne doit pas être vide !</string>
     <string name="have_to_choose_a_size">Vous devez choisir un diamètre de cible dans la liste.</string>
     <string name="have_to_fill_fields">Vous devez remplir les champs !</string>
     <string name="user_has_been_deleted">L\'utilisateur a bien été supprimé !</string>
     <string name="delete_user">Supprimer un utilisateur</string>
+    <string name="delete_base">Supprimer la base de données</string>
     <string name="have_to_select_user">Veuillez saisir un utilisateur !</string>
     <string name="has_to_fill_criterias">Vous devez remplir tous les critères choisis.</string>
     <string name="choose_criteria">Choix des critères</string>
@@ -111,6 +113,14 @@
     <string name="sinterface">Interface</string>
     <string name="moyenne_manche">Volée moyenne</string>
     <string name="nb_10p_total">Nombre de 10/9</string>
+    <string name="nomarc">Nom arc :</string>
+    <string name="typearc">Type d\'arc : </string>
+    <string name="nouveau">Nouveau</string>
+    <string name="score">Score</string>
+    <string name="mes_arcs_accueil">Mes arcs</string>
+    <string name="conseil">Conseil</string>
+    <string name="title_activity_arc">Mes Arcs</string>
+    <string name="add_arc">Ajouter un Arc</string>
 
     <color name="color_slashScreen">#e5e5e5</color>
     <color name="titre1">#ff0099cc</color>
@@ -118,6 +128,9 @@
     <color name="nb9">#ffff8800</color>
     <color name="moyenne">#ff669900</color>
     <color name="totalvolee">#ffff4444</color>
+    <color name="color_button">#2C2C2C</color>
+    <color name="color_button_text">#45BBE6</color>
+
     <string-array name="colonnes_10_10p">
         <item >Total par volée</item>
         <item >Total cumulé</item>
