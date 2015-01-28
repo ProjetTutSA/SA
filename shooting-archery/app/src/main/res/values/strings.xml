@@ -114,6 +114,7 @@
     <!-- nom du button qui est dans mes arcs -->
     <string name="mes_arcs"></string>
     <string name="no_arc">Aucun arc pour le moment </string>
+    <string name="tblason">Taille blason</string>
 
 
     <!-- accueil activity -->

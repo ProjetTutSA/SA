@@ -115,6 +115,10 @@
             android:name="fr.iutbm.lpro.tiralarc.detailarc_activity"
             android:label="@string/title_activity_detailarc_activity" >
         </activity>
+        <activity
+            android:name="fr.iutbm.lpro.tiralarc.nouveau_activity"
+            android:label="@string/title_activity_detailarc_activity" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,63 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:weightSum="1"
-    tools:context=".test">
-
+    tools:context=".test" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:orientation="horizontal"
-        android:weightSum="1">
-
-        <TextView
-            android:layout_width="214dp"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Mes arcs"
-            android:id="@+id/textView"
-            android:textSize="50dp"
-            android:layout_weight="1.02" />
-
-        <Button
-            android:autoLink="all"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:id="@+id/button" />
-
+        android:weightSum="1" >
     </LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="ARC 1"
         android:id="@+id/arc1"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.18" />
-
-    <Button
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="ARC 2"
-        android:id="@+id/arc2"
-        android:layout_weight="0.06" />
+        android:layout_height="60dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="0.04"
+        android:background="#2C2C2C"
+        android:text="ARC 1"
+        android:textColor="#45BBE6"
+        android:textColorHint="#45BBE6"
+        android:textSize="32dp" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="ARC 3"
-        android:id="@+id/arc3"
-        android:layout_weight="0.06" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="ARC 4"
-        android:id="@+id/arc4"
-        android:layout_weight="0.02"
-        android:layout_gravity="center_horizontal" />
 </LinearLayout><!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/layout/activity_mesnarcs.xml -->

@@ -154,4 +154,8 @@ public class AccueilActivity extends Activity {
            Button monarc = (Button) v;
             startActivity(new Intent(this,mesarcs_activity.class));
         }
+    public void buttonOnClick1(View v){
+        Button monarc = (Button) v;
+        startActivity(new Intent(this,nouveau_activity.class));
+    }
 }
