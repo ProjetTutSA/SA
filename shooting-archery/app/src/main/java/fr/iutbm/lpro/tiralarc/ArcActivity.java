@@ -4,17 +4,23 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,36 +35,93 @@ import fr.iutbm.lpro.tiralarc.dbman.Utilisateur;
 public class ArcActivity extends Activity {
     private DBHelper db;
     private Spinner popupTypeSpinner = null;
+    private Spinner userSpinner;
     EditText EditNomArc = null;
     private List<TypeArc> TypeList;
+    int idUserSelected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arc);
         db = new DBHelper(this); //connection bdd
+
+        setupUser();
     }
-    private void ListArcFragments() {
-        List<Integer> arc = db.getListnbrArc();
-        if (arc.size() == 0) {
-            findViewById(R.id.arc_noDataText).setVisibility(View.VISIBLE);
-            return;
-        }
-      /*  FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        for (int i=0;i<arc.size();i++) {
-            ListeArc list = new ListeArc();
-            *//*ScoreTableFragment stf = new ScoreTableFragment();*//*
-            Bundle arguments = new Bundle();
-            arguments.putInt("idArc", arc.get(i));
-            list.setArguments(arguments);
-            fragmentTransaction.add(R.id.arc_fragments, list, "stf" + i);
-            if (i != arc.size() - 1) {
-                SeparatorFragment sf = new SeparatorFragment();
-                fragmentTransaction.add(R.id.arc_fragments, sf);
+    private int findTextId(SpinnerAdapter adapter, String nomUser) {
+        int retour = 0;
+        for (int i=0; i<adapter.getCount();i++) {
+            if (nomUser.equals(adapter.getItem(i).toString())) {
+                return i;
             }
         }
-        fragmentTransaction.commit();*/
+        return retour;
+    }
+
+    private void setupUser() {
+        userSpinner = (Spinner) findViewById(R.id.arc_spinner_user);
+        //Remplissage Spinner
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item, db.getUtilisateursForSpinner());
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        userSpinner.setAdapter(adapter);
+
+        //Lecture nom utilisateur
+        SharedPreferences preferences = getSharedPreferences("partie", Context.MODE_PRIVATE);
+        String nomUser = preferences.getString("NomUtilisateur", "");
+
+        if (!nomUser.isEmpty()) {
+            userSpinner.setSelection(findTextId(userSpinner.getAdapter(),nomUser));
+        }
+
+        userSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                String[] userName = userSpinner.getSelectedItem().toString().split(" ");
+                Utilisateur curUser = db.getUtilisateurFromName(userName[0], userName[1]);
+                idUserSelected = curUser.getId();
+                ListArcFragments(curUser.getId());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // ???
+            }
+
+        });
+    }
+
+    private void ListArcFragments(int id) {
+        List<Arc> arc = db.getArcsByUser(id);
+        if (arc.size() == 0) {
+            ((TextView) findViewById(R.id.arc_noDataText)).setVisibility(View.VISIBLE);
+            return;
+        }
+        ((TextView) findViewById(R.id.arc_noDataText)).setVisibility(View.GONE);
+        LinearLayout ll = (LinearLayout) findViewById(R.id.listarc);
+        ll.removeAllViews();
+        for (Arc arcsolo : arc) {
+
+            float dp = getResources().getDisplayMetrics().density;
+            String nom = arcsolo.getNomArc();
+            Button arcBut = new Button(this);
+
+            arcBut.setText(nom);
+            arcBut.setTextColor(getResources().getColor(R.color.color_button_text));
+            arcBut.setId(arcsolo.getIdArc());
+            arcBut.setBackgroundColor(getResources().getColor(R.color.color_button));
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ll.getMeasuredWidth()
+                   ,getResources().getDimensionPixelSize(R.dimen.size_60));
+
+
+            arcBut.setLayoutParams(layoutParams);
+            arcBut.setTextSize(32);
+            ll.addView(arcBut);
+
+
+
+        }
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -113,7 +176,13 @@ public class ArcActivity extends Activity {
                             EditNomArc.setError(getString(R.string.nom_arc_not_null));
 
                         }else{
-                            String type = selection.toString();
+                            String nomType = selection.toString();
+                            TypeArc typeSelect = db.getTypeArcFromName(nomType);
+                            int idTypeSelect =typeSelect.getIdTypeArc();
+
+
+                            db.addArc(new Arc(idUserSelected,0,nomArc,idTypeSelect));
+                            setupUser();
                             //lancer linsert get l'utilisateur
                             d.dismiss();
                         }

@@ -648,6 +648,19 @@ public class DBHelper extends SQLiteOpenHelper {
 
         return result;
     }
+    public TypeArc getTypeArcFromName(String nom)
+    {
+        TypeArc result= null;
+        SQLiteDatabase db = this.getReadableDatabase();
+        //Cursor cursor= db.query("TypeArc", new String[] {"idTypeArc", "NomType" }, "NomType="+nom, null, null, null, null);
+        Cursor cursor = db.rawQuery("SELECT idTypeArc, NomType FROM TypeArc WHERE NomType ='" + nom +"';", null);
+        if (cursor.moveToFirst())
+        {
+            result= new TypeArc(cursor.getInt(0),nom);
+        }
+
+        return result;
+    }
 
 
     //---------------------------------------------------------------
@@ -703,6 +716,20 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
         return result;
     }
+    public ArrayList<Integer> getListnbrArcByUser(int id) {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        String selectQuery= "SELECT idArc FROM Arc where idUtilisateur ="+id+";";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                result.add(cursor.getInt(0));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return result;
+    }
 
     public Arc getArcFromName(String nom)
     {
@@ -748,6 +775,40 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
 
         return arcsList;
+    }
+
+    public List<Arc> getArcsByUser(int id) {
+        List<Arc> arcsList = new ArrayList<Arc>();
+
+        String selectQuery = "SELECT * FROM Arc WHERE idUtilisateur = "+id+";";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Arc arc = new Arc(Integer.parseInt(cursor.getString(0)),
+                        Integer.parseInt(cursor.getString(1)),
+                        cursor.getString(2),
+                        Integer.parseInt(cursor.getString(3)));
+                // Adding contact to list
+                arcsList.add(arc);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+
+        return arcsList;
+    }
+
+    public String getNomArc(int id) {
+        String selectQuery = "SELECT NomArc FROM Arc WHERE idArc='"+id+"';";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        String nom = cursor.getString(0);
+        return nom;
     }
 
     public List<String> getArcsForSpinner() {

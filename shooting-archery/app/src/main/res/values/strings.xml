@@ -120,7 +120,13 @@
     <string name="mes_arcs_accueil">Mes arcs</string>
     <string name="conseil">Conseil</string>
     <string name="title_activity_arc">Mes Arcs</string>
+    <string name="title_activity_choix_reglage">Réglages de l'arc</string>
+    <string name="title_activity_viseur">Réglages Viseur</string>
     <string name="add_arc">Ajouter un Arc</string>
+    <string name="select_nom_user">Selectionner un Utilisateur :</string>
+    <string name="viseur">Viseur</string>
+    <string name="berger_button">Berger Button( A venir)</string>
+    <string name="tiller">Tiller (A venir)</string>
 
     <color name="color_slashScreen">#e5e5e5</color>
     <color name="titre1">#ff0099cc</color>

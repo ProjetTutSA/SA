@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/viseur"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_60"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_4"
+        android:layout_marginTop="@dimen/size_4"
+        android:background="@color/color_button"
+        android:text="@string/viseur"
+        android:textColor="@color/color_button_text"
+        android:textColorHint="@color/color_button_text"
+        android:textSize="@dimen/size_32"/>
+    <Button
+        android:id="@+id/berger_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_60"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/size_4"
+        android:background="@color/color_button"
+        android:text="@string/berger_button"
+        android:textColor="@color/color_button_text"
+        android:textColorHint="@color/color_button_text"
+        android:textSize="@dimen/size_32" />
+    <Button
+        android:id="@+id/tiller"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_60"
+        android:layout_marginBottom="@dimen/size_4"
+        android:background="@color/color_button"
+        android:text="@string/tiller"
+        android:textColor="@color/color_button_text"
+        android:textColorHint="@color/color_button_text"
+        android:textSize="@dimen/size_32" />
+
+</LinearLayout>
