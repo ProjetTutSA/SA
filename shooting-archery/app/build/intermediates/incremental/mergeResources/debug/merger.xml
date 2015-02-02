@@ -69,8 +69,18 @@
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
+                name="blasonfield_checked"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\blasonfield_checked.jpg"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
                 name="blasontrispo"
                 path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\blasontrispo.jpg"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="blasontrispo_checked"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\blasontrispo_checked.jpg"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
@@ -181,6 +191,26 @@
             <file
                 name="paille_carre"
                 path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\paille_carre.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="radiobutton_selector0"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector0.xml"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="radiobutton_selector1"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector1.xml"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="radiobutton_selector2"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector2.xml"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="radiobutton_selector3"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector3.xml"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
@@ -786,36 +816,6 @@ per_game
                 path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\xml\pref_general.xml"
                 qualifiers=""
                 type="xml" />
-            <file
-                name="radiobutton_selector1"
-                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector1.xml"
-                qualifiers="hdpi-v4"
-                type="drawable" />
-            <file
-                name="radiobutton_selector0"
-                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector0.xml"
-                qualifiers="hdpi-v4"
-                type="drawable" />
-            <file
-                name="blasonfield_checked"
-                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\blasonfield_checked.jpg"
-                qualifiers="hdpi-v4"
-                type="drawable" />
-            <file
-                name="blasontrispo_checked"
-                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\blasontrispo_checked.jpg"
-                qualifiers="hdpi-v4"
-                type="drawable" />
-            <file
-                name="radiobutton_selector3"
-                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector3.xml"
-                qualifiers="hdpi-v4"
-                type="drawable" />
-            <file
-                name="radiobutton_selector2"
-                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector2.xml"
-                qualifiers="hdpi-v4"
-                type="drawable" />
         </source>
         <source path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\build\generated\res\rs\debug" />
         <source path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\build\generated\res\generated\debug" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_checked="true" android:drawable="@drawable/classique_checked125" />
-    <item android:state_checked="false" android:drawable="@drawable/classique125" />
+    <item android:state_checked="true" android:drawable="@drawable/classique_checked" />
+    <item android:state_checked="false" android:drawable="@drawable/classique" />
 </selector><!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/drawable-hdpi/radiobutton_selector0.xml -->

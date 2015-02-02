@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:orientation="vertical" >
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -24,15 +23,140 @@
                 <TextView
                     android:id="@+id/config2_libtypecible"
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_weight="50"
                     android:text="@string/choix_cible"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textStyle="bold"
-                    android:layout_gravity="center_horizontal" />
+                    android:textStyle="bold" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="100" >
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="167dp"
+                    android:id="@+id/horizontalScrollView" >
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_gravity="top|left|center_horizontal">
+
+
+
+                        <RadioGroup android:layout_width="match_parent"
+                            android:id="@+id/config2_radioCibleBlason"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <RadioButton android:button="@drawable/radiobutton_selector0"
+
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"
+                                android:layout_marginLeft="10dp"></RadioButton>
+                            <RadioButton android:button="@drawable/radiobutton_selector1"
+
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"
+                                android:layout_weight="0.25"></RadioButton>
+                            <RadioButton android:button="@drawable/radiobutton_selector2"
+                                android:id="@+id/config2_radioCibleTrispot"
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"
+                                android:layout_weight="0.25"></RadioButton>
+                            <RadioButton android:button="@drawable/radiobutton_selector3"
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"
+                                android:layout_weight="0.25"></RadioButton>
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" >
+
+                <TextView
+                    android:id="@+id/config2_libtaillecible"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/taille_cible"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/config2_spinnertaille"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/config3_libConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Conditions : "
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp" >
+
+                    <RadioButton
+                        android:id="@+id/config2_radioCompetition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:checked="false"
+                        android:text="Competition" />
+
+                    <RadioButton
+                        android:id="@+id/config2_radioEntrainement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:text="Entrainement" />
+                </RadioGroup>
             </LinearLayout>
 
         </LinearLayout>
@@ -41,241 +165,12 @@
 
     </ScrollView>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="96dp"
-        android:layout_gravity="top|left|center_horizontal">
-
-
-        <!--<RadioGroup-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="horizontal">-->
-
-
-
-            <!--<RadioButton-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:id="@+id/radioButton"-->
-                <!--android:button="@drawable/classique"-->
-                <!--android:checked="false" />-->
-            <!--<RadioButton-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:id="@+id/radioButton2"-->
-                <!--android:button="@drawable/classique"-->
-                <!--android:checked="false" />-->
-            <!--<RadioButton-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:id="@+id/radioButton3"-->
-                <!--android:button="@drawable/classique"-->
-                <!--android:checked="false" />-->
-
-
-
-        <!--</RadioGroup>-->
-        <RadioGroup android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <RadioButton android:button="@drawable/radiobutton_selector0"
-                android:layout_height="wrap_content" android:layout_width="wrap_content"
-                android:layout_weight="0.25"
-                android:layout_marginLeft="10dp"></RadioButton>
-            <RadioButton android:button="@drawable/radiobutton_selector1"
-                android:layout_height="wrap_content" android:layout_width="wrap_content"
-                android:layout_weight="0.25"></RadioButton>
-            <RadioButton android:button="@drawable/radiobutton_selector2"
-                android:layout_height="wrap_content" android:layout_width="wrap_content"
-                android:layout_weight="0.25"></RadioButton>
-            <RadioButton android:button="@drawable/radiobutton_selector3"
-                android:layout_height="wrap_content" android:layout_width="wrap_content"
-                android:layout_weight="0.25"></RadioButton>
-        </RadioGroup>
-
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView2" >
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/entrainement"
-                android:id="@+id/radioButton" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/competition"
-                android:id="@+id/radioButton2" />
-
-        </RadioGroup>
-    </ScrollView>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView3"
-        android:layout_weight="0.63">
-
-        <LinearLayout
-            android:id="@+id/config3_manches_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:visibility="visible"
-            android:weightSum="1">
-
-            <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="2dp"
-                android:shrinkColumns="0,1" >
-
-                <TableRow
-                    android:id="@+id/tableRow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/config3_libNombresManches"
-                        android:layout_width="match_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_column="0"
-                        android:layout_gravity="left|center_vertical"
-                        android:layout_margin="2dip"
-                        android:gravity="center"
-                        android:padding="2dip"
-                        android:text="@string/tblason"
-                        android:textColor="@android:color/black"
-                        android:textSize="15sp" />
-
-
-                </TableRow>
-            </TableLayout>
-
-            <SeekBar
-                android:id="@+id/config3_seekNbManches"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:max="60"
-                android:maxHeight="13dp"
-                android:progress="0"
-                android:secondaryProgress="0" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal"
-                android:visibility="visible"
-                android:weightSum="12"
-                android:layout_weight="0.69">
-
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center_horizontal"
-                    android:text="10"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center_horizontal"
-                    android:text="20"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center_horizontal"
-                    android:text="30"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center_horizontal"
-                    android:text="40"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center_horizontal"
-                    android:text="50"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:gravity="center_horizontal"
-                    android:text="60"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_weight="1.76">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/interieur"
-                android:id="@+id/radioButton3" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/exterieur"
-                android:id="@+id/radioButton4" />
-        </RadioGroup>
-
-
-    </LinearLayout>
-    </ScrollView>
-
-    <ImageButton
-        android:layout_width="206dp"
-        android:layout_height="51dp"
-        android:id="@+id/imageButton"
+    <Button
+        android:layout_width="225dp"
+        android:layout_height="58dp"
+        android:id="@+id/button2"
         android:background="@drawable/fleche"
-        android:adjustViewBounds="true"
-        android:layout_gravity="bottom|center_horizontal" />
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
 <!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/layout/activity_nouveau.xml -->

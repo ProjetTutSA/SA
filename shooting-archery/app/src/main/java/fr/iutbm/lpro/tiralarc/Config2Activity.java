@@ -52,12 +52,21 @@ public class Config2Activity extends Activity
 
 	private void readPreferences() {
 		SharedPreferences preferences = getSharedPreferences("partie", Context.MODE_PRIVATE);
+//
+//		if(preferences.getBoolean("ImageClassique", false))
+//			classiqueRadio.setChecked(true);
+//		if(preferences.getBoolean("ImageTrispot", false))
+//			trispotRadio.setChecked(true);
 
-		if(preferences.getBoolean("ImageClassique", false))
+
+        if(preferences.getBoolean("", false))
 			classiqueRadio.setChecked(true);
 		if(preferences.getBoolean("ImageTrispot", false))
 			trispotRadio.setChecked(true);
-		
+
+
+
+
 		//lecture choix condition
 		if(preferences.getBoolean("RadioEntrainement", false))
 			entrainement.setChecked(true);
@@ -69,8 +78,8 @@ public class Config2Activity extends Activity
 	private void fillAttributes()
 	{
 		db = new DBHelper(this);
-		classique = (ImageView)findViewById(R.id.config2_cibleImg);
-		trispot = (ImageView)findViewById(R.id.config2_cibleTrispotImg);
+//		classique = (RadioButton)findViewById(R.id.config2_cibleImg);
+//		trispot = (RadioButton)findViewById(R.id.config2_cibleTrispotImg);
 		
 		spinner = (Spinner) findViewById(R.id.config2_spinnertaille);
 		
@@ -158,8 +167,7 @@ public class Config2Activity extends Activity
 		//Choix cible
 		classiqueRadio = (RadioButton)findViewById(R.id.config2_radioCibleBlason);
 		trispotRadio = (RadioButton)findViewById(R.id.config2_radioCibleTrispot);
-		editor.putBoolean("ImageClassique",classiqueRadio.isChecked());
-		editor.putBoolean("ImageTrispot", trispotRadio.isChecked());
+
 		//fin choix cible
 		
 		//choix condition
