@@ -251,6 +251,16 @@ public class DBHelper extends SQLiteOpenHelper {
 		SQLiteDatabase db = this.getWritableDatabase();
 		db.rawQuery("DELETE FROM Tirer WHERE idPartie in (SELECT idPartie FROM Partie WHERE idUtilisateur="+user.getId()+");", null);
 		db.delete("Partie", "idUtilisateur="+user.getId(), null);
+
+        Cursor cursor = db.rawQuery("SELECT idArc FROM Arc WHERE idUtilisateur ="+user.getId()+";", null);
+        if (cursor.moveToFirst()) {
+            do {
+                db.delete("Graduation", "idArc="+cursor.getInt(0), null);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+
+        db.delete("Arc", "idUtilisateur="+user.getId(), null);
 		db.delete("Utilisateur", "idUtilisateur="+user.getId(), null);
 		db.close();
 	}
@@ -640,10 +650,11 @@ public class DBHelper extends SQLiteOpenHelper {
     {
         TypeArc result= null;
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor= db.query("TypeArc", new String[] {"idTypeArc", "NomType" }, "idTypeArc="+id, null, null, null, null);
+        //Cursor cursor= db.query("TypeArc", new String[] {"idTypeArc", "NomType" }, "idTypeArc="+id, null, null, null, null);
+        Cursor cursor= db.rawQuery("SELECT * FROM TypeArc WHERE idTypeArc =" + id +";", null);
         if (cursor.moveToFirst())
         {
-            result= new TypeArc(id,cursor.getString(0));
+            result= new TypeArc(cursor.getInt(0),cursor.getString(1));
         }
 
         return result;
@@ -653,10 +664,10 @@ public class DBHelper extends SQLiteOpenHelper {
         TypeArc result= null;
         SQLiteDatabase db = this.getReadableDatabase();
         //Cursor cursor= db.query("TypeArc", new String[] {"idTypeArc", "NomType" }, "NomType="+nom, null, null, null, null);
-        Cursor cursor = db.rawQuery("SELECT idTypeArc, NomType FROM TypeArc WHERE NomType ='" + nom +"';", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM TypeArc WHERE NomType ='" + nom +"';", null);
         if (cursor.moveToFirst())
         {
-            result= new TypeArc(cursor.getInt(0),nom);
+            result= new TypeArc(cursor.getInt(0),cursor.getString(1));
         }
 
         return result;
@@ -744,7 +755,7 @@ public class DBHelper extends SQLiteOpenHelper {
             arc = new Arc(Integer.parseInt(cursor.getString(0)),
                     Integer.parseInt(cursor.getString(1)),
                     cursor.getString(2),
-                    cursor.getInt(2));
+                    cursor.getInt(3));
         }
         cursor.close();
         db.close();
@@ -824,6 +835,14 @@ public class DBHelper extends SQLiteOpenHelper {
     public int getArcsCounts() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM Arc;", null);
+        int count = cursor.getCount();
+        cursor.close();
+        db.close();
+        return count;
+    }
+    public int getArcsCountByUser(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM Arc WHERE idUtilisateur ='"+id+"';", null);
         int count = cursor.getCount();
         cursor.close();
         db.close();
@@ -937,6 +956,29 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
 
         return graduationList;
+    }
+    public List<Graduation> getListReglageByArc(int id) {
+        List<Graduation> result = new ArrayList<Graduation>();
+        String selectQuery= "SELECT * FROM Graduation where idArc ="+id+";";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Graduation grad = new Graduation(Integer.parseInt(cursor.getString(0)),
+                        Integer.parseInt(cursor.getString(1)),
+                        Integer.parseInt(cursor.getString(2)),
+                        cursor.getString(3),
+                        cursor.getFloat(4),
+                        cursor.getFloat(5),
+                        cursor.getFloat(6));
+                // Adding contact to list
+                result.add(grad);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return result;
     }
 
     /* List<String> getTypeArcForSpinner() {

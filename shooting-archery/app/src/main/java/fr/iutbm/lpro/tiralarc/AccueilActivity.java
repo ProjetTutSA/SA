@@ -178,8 +178,8 @@ public class AccueilActivity extends Activity {
                     Intent intent3 = new Intent(view.getContext(), ArcActivity.class);
                     startActivity(intent3);
                     break;
-                case R.id.conseil:
-                    /*Intent intent4 = new Intent(view.getContext(), SortActivity.class);
+                /*case R.id.conseil:
+                    Intent intent4 = new Intent(view.getContext(), SortActivity.class);
                     startActivity(intent4);
                     break;*/
 

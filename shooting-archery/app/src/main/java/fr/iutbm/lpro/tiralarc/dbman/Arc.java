@@ -5,7 +5,7 @@ public class Arc {
     private int idArc;
     private String NomArc;
     private int idTypeArc;
-    public Arc(int idUtilisateur, int idArc,
+    public Arc(int idArc,int idUtilisateur,
                String NomArc, int idTypeArc) {
         super();
         this.idUtilisateur = idUtilisateur;

@@ -110,7 +110,7 @@
             android:label="@string/title_activity_arc" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.iutbm.lpro.tiralarc.AcceuilActivity" />
+                android:value="fr.iutbm.lpro.tiralarc.AccueilActivity" />
         </activity>
         <activity
             android:name=".ChoixReglage"

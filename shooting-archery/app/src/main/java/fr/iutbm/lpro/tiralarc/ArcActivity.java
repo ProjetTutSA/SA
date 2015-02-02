@@ -9,7 +9,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.text.Html;
 import android.text.TextUtils;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -40,14 +43,18 @@ public class ArcActivity extends Activity {
     private List<TypeArc> TypeList;
     int idUserSelected;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arc);
         db = new DBHelper(this); //connection bdd
 
+        setupActionBar();
         setupUser();
     }
+
+
     private int findTextId(SpinnerAdapter adapter, String nomUser) {
         int retour = 0;
         for (int i=0; i<adapter.getCount();i++) {
@@ -101,27 +108,62 @@ public class ArcActivity extends Activity {
         ((TextView) findViewById(R.id.arc_noDataText)).setVisibility(View.GONE);
         LinearLayout ll = (LinearLayout) findViewById(R.id.listarc);
         ll.removeAllViews();
+
         for (Arc arcsolo : arc) {
 
             float dp = getResources().getDisplayMetrics().density;
             String nom = arcsolo.getNomArc();
-            Button arcBut = new Button(this);
 
+            Button arcBut = new Button(this);
+////TEST pour suppression
+            /*LinearLayout layoutArc = new LinearLayout(this);
+            layoutArc.setOrientation(LinearLayout.HORIZONTAL);
+
+            layoutArc.setBackgroundColor(getResources().getColor(R.color.color_button));
+            LinearLayout.MarginLayoutParams lamargin = new LinearLayout.MarginLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            lamargin.setMargins(0,0,0,100);
+            layoutArc.setLayoutParams(lamargin);
+
+
+            TextView textArc = new TextView(this);
+            textArc.setText(nom);
+            textArc.setTextColor(getResources().getColor(R.color.color_button_text));
+            textArc.setTextSize(32);
+            textArc.setGravity(Gravity.CENTER_HORIZONTAL);
+            LinearLayout.LayoutParams talp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            textArc.setLayoutParams(talp);*/
+
+
+
+
+
+//FIN TEST
             arcBut.setText(nom);
             arcBut.setTextColor(getResources().getColor(R.color.color_button_text));
+            arcBut.setHintTextColor(getResources().getColor(R.color.color_button_text));
             arcBut.setId(arcsolo.getIdArc());
             arcBut.setBackgroundColor(getResources().getColor(R.color.color_button));
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ll.getMeasuredWidth()
-                   ,getResources().getDimensionPixelSize(R.dimen.size_60));
+            arcBut.setTextSize(30);
 
+            LinearLayout.MarginLayoutParams margin = (LinearLayout.MarginLayoutParams) ll.getLayoutParams();
+            margin.setMargins(0,0,0,10);
+            margin.height =LinearLayout.LayoutParams.WRAP_CONTENT ;
+            arcBut.setGravity(Gravity.CENTER_HORIZONTAL);
+            arcBut.setLayoutParams(margin);
 
-            arcBut.setLayoutParams(layoutParams);
-            arcBut.setTextSize(32);
+            arcBut.requestLayout();
+            arcBut.setOnClickListener(handleClick);
             ll.addView(arcBut);
+            /*layoutArc.addView(textArc);
+            layoutArc.addView(arcBut);*/
 
 
 
         }
+    }
+
+    private void setupActionBar() {
+       getActionBar().setDisplayHomeAsUpEnabled(true);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -133,6 +175,9 @@ public class ArcActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
         switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
             case R.id.action_add:
                 showAddArc();
                 return true;
@@ -178,13 +223,18 @@ public class ArcActivity extends Activity {
                         }else{
                             String nomType = selection.toString();
                             TypeArc typeSelect = db.getTypeArcFromName(nomType);
-                            int idTypeSelect =typeSelect.getIdTypeArc();
+                            int idTypeSelect = typeSelect.getIdTypeArc();
+                            int nbArcForUser = db.getArcsCountByUser(idUserSelected);
+                            if (nbArcForUser >= 4){
+                                Toast.makeText(getApplicationContext(),"Vous avez déjà quatre arcs d'enregistrer!", Toast.LENGTH_LONG).show();
+                                d.dismiss();
+                            }else{
 
-
-                            db.addArc(new Arc(idUserSelected,0,nomArc,idTypeSelect));
-                            setupUser();
-                            //lancer linsert get l'utilisateur
-                            d.dismiss();
+                                db.addArc(new Arc( 0, idUserSelected,nomArc, idTypeSelect));
+                                setupUser();
+                                //lancer linsert get l'utilisateur
+                                d.dismiss();
+                            }
                         }
                     }
                 });
@@ -208,4 +258,15 @@ public class ArcActivity extends Activity {
         ArrayAdapter<String> adapterType = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listStringType);
         popupTypeSpinner.setAdapter(adapterType);
     }
+
+    protected View.OnClickListener handleClick = new View.OnClickListener() {
+        public void onClick(View view) {
+
+            Button btn = (Button) view;
+                    Intent intent = new Intent(getApplicationContext(), ChoixReglage.class);
+                    intent.putExtra("nomArc", btn.getText());
+                    startActivity(intent);
+
+        }
+    };
 }

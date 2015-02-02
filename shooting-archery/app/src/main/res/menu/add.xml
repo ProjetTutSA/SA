@@ -3,7 +3,7 @@
     <item
         android:id="@+id/action_add"
         android:orderInCategory="100"
-        android:icon="@drawable/next_item"
+        android:icon="@drawable/plus"
         android:showAsAction="always"
         android:title="@string/add_arc">
     </item>

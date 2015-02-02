@@ -17,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/size20"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:maxLength="20"/>
 
     <Spinner
         android:id="@+id/popup_spinner_typearc"

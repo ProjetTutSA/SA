@@ -92,7 +92,13 @@
     <string name="no_user_inside">Pas d\'utilisateur enregistré, veuillez renseigner votre identité.</string>
     <string name="name_not_be_null">Nom ne doit pas être vide !</string>
     <string name="prenom_not_null">Prenom ne doit pas être vide !</string>
-    <string name="nom_arc_not_null">Le de l\'arc ne doit pas être vide !</string>
+    <string name="nom_arc_not_null">Le nom de l\'arc ne doit pas être vide !</string>
+    <string name="distance_not_null">La distance ne doit pas être vide !</string>
+    <string name="horizontal_not_null">La valeur horizontal ne doit pas être vide !</string>
+    <string name="vertical_not_null">La valeur vertical ne doit pas être vide !</string>
+    <string name="profondeur_not_null">La profondeur ne doit pas être vide !</string>
+
+
     <string name="have_to_choose_a_size">Vous devez choisir un diamètre de cible dans la liste.</string>
     <string name="have_to_fill_fields">Vous devez remplir les champs !</string>
     <string name="user_has_been_deleted">L\'utilisateur a bien été supprimé !</string>
@@ -120,13 +126,19 @@
     <string name="mes_arcs_accueil">Mes arcs</string>
     <string name="conseil">Conseil</string>
     <string name="title_activity_arc">Mes Arcs</string>
-    <string name="title_activity_choix_reglage">Réglages de l'arc</string>
+    <string name="title_activity_choix_reglage">Réglages de l\'arc</string>
     <string name="title_activity_viseur">Réglages Viseur</string>
     <string name="add_arc">Ajouter un Arc</string>
     <string name="select_nom_user">Selectionner un Utilisateur :</string>
     <string name="viseur">Viseur</string>
     <string name="berger_button">Berger Button( A venir)</string>
     <string name="tiller">Tiller (A venir)</string>
+    <string name="nomremarque">Nom remarque :</string>
+    <string name="distance_reg">Distance(m) :</string>
+    <string name="profondeur_reg">Profondeur :</string>
+    <string name="horizontal_reg">Horizontal :</string>
+    <string name="vertical_reg">Vertical :</string>
+    <string name="add_reg">Ajouter un Réglage</string>
 
     <color name="color_slashScreen">#e5e5e5</color>
     <color name="titre1">#ff0099cc</color>
