@@ -165,12 +165,7 @@
 
     </ScrollView>
 
-    <Button
-        android:layout_width="225dp"
-        android:layout_height="58dp"
-        android:id="@+id/button2"
-        android:background="@drawable/fleche"
-        android:layout_gravity="center_horizontal" />
+
 
 </LinearLayout>
 <!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/layout/activity_config2.xml -->
