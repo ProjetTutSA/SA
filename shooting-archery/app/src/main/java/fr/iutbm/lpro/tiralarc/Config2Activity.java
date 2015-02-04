@@ -175,7 +175,7 @@ public class Config2Activity extends Activity
 		//Choix cible
 		classiqueRadio = (RadioButton)findViewById(R.id.config2_radioCibleBlason);
 		trispotRadio = (RadioButton)findViewById(R.id.config2_radioCibleTrispot);
-		campagneRadio = (RadioButton)findViewById(R.id.config2_radioCibleTrispot);
+		campagneRadio = (RadioButton)findViewById(R.id.config2_radioCibleCampagne);
 
 
 		//fin choix cible

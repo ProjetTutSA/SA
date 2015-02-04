@@ -52,13 +52,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02c9820-4b2a-42a9-9eb9-1a8f4747210e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\java\fr\iutbm\lpro\tiralarc\nouveau_activity.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\drawable-hdpi.zip" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/AccueilActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/AccueilActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/Config2Activity.java" afterPath="$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/Config2Activity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/fr/iutbm/lpro/tiralarc/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/fr/iutbm/lpro/tiralarc/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_config2.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_config2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="arrowseye-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -115,11 +109,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config2Activity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Config2Activity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/Config2Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-129.92857" vertical-offset="255" max-vertical-offset="4097">
-              <caret line="237" column="0" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+            <state vertical-scroll-proportion="5.622309" vertical-offset="0" max-vertical-offset="4097">
+              <caret line="175" column="82" selection-start-line="175" selection-start-column="82" selection-end-line="175" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,10 +165,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBHelper.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DBHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/dbman/DBHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3246753" vertical-offset="1020" max-vertical-offset="10132">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="10132">
               <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
               <folding />
             </state>
@@ -1340,10 +1334,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_nouveau.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/radiobutton_selectorp1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detailarc.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/Config2Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/nouveau_activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_config2.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/AccueilActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/Config2Activity.java" />
       </list>
     </option>
   </component>
@@ -1998,7 +1992,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3047831" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -2455,16 +2449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/Config2Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-129.92857" vertical-offset="255" max-vertical-offset="4097">
-          <caret line="237" column="0" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/dbman/Diametre.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
@@ -2497,9 +2481,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/dbman/DBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3246753" vertical-offset="1020" max-vertical-offset="10132">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="10132">
           <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/iutbm/lpro/tiralarc/Config2Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.622309" vertical-offset="0" max-vertical-offset="4097">
+          <caret line="175" column="82" selection-start-line="175" selection-start-column="82" selection-end-line="175" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
