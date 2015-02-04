@@ -6,33 +6,24 @@
     android:gravity="top|left|right|center_vertical|fill_horizontal"
     android:orientation="vertical" >
 
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="358dp"
+    <RadioGroup android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+        <RadioButton android:button="@drawable/radiobutton_selectorp0"
+            android:id="@+id/config2_radioCibleBlason"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"></RadioButton>
+        <RadioButton android:button="@drawable/radiobutton_selectorp1"
+            android:id="@+id/config2_radioCibleCampagne"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"></RadioButton>
+        <RadioButton android:button="@drawable/radiobutton_selectorp2"
+            android:id="@+id/config2_radioCibleTrispot"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"></RadioButton>
 
-        <RadioButton
-            android:id="@+id/radio0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:button="@drawable/radiobutton_selectorp0"
-            android:checked="true" />
-
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selectorp1" />
-
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:button="@drawable/radiobutton_selectorp2" />
     </RadioGroup>
 
     <TextView

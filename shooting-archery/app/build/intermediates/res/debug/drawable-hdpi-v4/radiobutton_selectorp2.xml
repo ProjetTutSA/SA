@@ -2,4 +2,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_checked="true" android:drawable="@drawable/piquetrouge" />
     <item android:state_checked="false" android:drawable="@drawable/piquetrouge" />
-</selector>
+</selector><!-- From: file:/C:/Users/Romain/Downloads/Android/SA/shooting-archery/app/src/main/res/drawable-hdpi/radiobutton_selectorp2.xml -->

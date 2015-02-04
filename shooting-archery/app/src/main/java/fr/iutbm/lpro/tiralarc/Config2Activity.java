@@ -29,6 +29,8 @@ public class Config2Activity extends Activity
 	ImageView trispot =null;
 	RadioButton classiqueRadio = null;
 	RadioButton trispotRadio = null;
+	RadioButton campagneRadio = null;
+
 	EditText tailleCible=null;
 	private RadioButton competition;
 	private RadioButton entrainement;
@@ -59,15 +61,15 @@ public class Config2Activity extends Activity
 //			trispotRadio.setChecked(true);
 
 
-        if(preferences.getBoolean("", false))
+
+        if(preferences.getBoolean("RadioCibleCampagne", false))
 			classiqueRadio.setChecked(true);
-		if(preferences.getBoolean("ImageTrispot", false))
+		if(preferences.getBoolean("RadioCibleBlason", false))
 			trispotRadio.setChecked(true);
+        if(preferences.getBoolean("RadioCibleTrispot", false))
+            trispotRadio.setChecked(true);
 
-
-
-
-		//lecture choix condition
+        //lecture choix condition
 		if(preferences.getBoolean("RadioEntrainement", false))
 			entrainement.setChecked(true);
 		if(preferences.getBoolean("RadioCompetition", false))
@@ -96,6 +98,9 @@ public class Config2Activity extends Activity
 		classiqueRadio.setOnCheckedChangeListener(occl);
 		trispotRadio = (RadioButton)findViewById(R.id.config2_radioCibleTrispot);
 		trispotRadio.setOnCheckedChangeListener(occl);
+
+        campagneRadio = (RadioButton)findViewById(R.id.config2_radioCibleCampagne);
+        campagneRadio.setOnCheckedChangeListener(occl);
 		
 		
 		competition = (RadioButton) findViewById(R.id.config2_radioCompetition);
@@ -103,24 +108,27 @@ public class Config2Activity extends Activity
 				
 		// On attribue un listener adapt� aux vues qui en ont besoin
 		// en cliquant sur l'id voulue -> check le radio correspondant
-		classique.setOnClickListener(new OnClickListener()
-		{
-			@Override
-			public void onClick(View v)
-			{
-				classiqueRadio.setChecked(true);
-			}
-		});
 
-		trispot.setOnClickListener( new OnClickListener() 
-		{
-			@Override
-			public void onClick(View v) 
-			{
-				trispotRadio.setChecked(true);
-			}
-		});
-		
+//		classique.setOnClickListener(new OnClickListener()
+//		{
+//			@Override
+//			public void onClick(View v)
+//			{
+//				classiqueRadio.setChecked(true);
+//			}
+//		});
+//
+//		trispot.setOnClickListener( new OnClickListener()
+//		{
+//			@Override
+//			public void onClick(View v)
+//			{
+//				trispotRadio.setChecked(true);
+//			}
+//		});
+
+
+
 	}
 
 	private void setupActionBar() 
@@ -167,6 +175,8 @@ public class Config2Activity extends Activity
 		//Choix cible
 		classiqueRadio = (RadioButton)findViewById(R.id.config2_radioCibleBlason);
 		trispotRadio = (RadioButton)findViewById(R.id.config2_radioCibleTrispot);
+		campagneRadio = (RadioButton)findViewById(R.id.config2_radioCibleTrispot);
+
 
 		//fin choix cible
 		
@@ -182,7 +192,7 @@ public class Config2Activity extends Activity
 	{
 		try
 		{
-			if(!classiqueRadio.isChecked() && !trispotRadio.isChecked())
+			if(!classiqueRadio.isChecked() && !trispotRadio.isChecked()&& !campagneRadio.isChecked())
 			{
 				makeAlert(getString(R.string.error),getString(R.string.erreur_radio_non_check));
 				return false;

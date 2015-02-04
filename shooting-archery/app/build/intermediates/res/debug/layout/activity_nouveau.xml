@@ -63,15 +63,15 @@
 
 
                         <RadioGroup android:layout_width="match_parent"
-                            android:id="@+id/config2_radioCibleBlason"
+
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <RadioButton android:button="@drawable/radiobutton_selector0"
-
+                                android:id="@+id/config2_radioCibleBlason"
                                 android:layout_height="wrap_content" android:layout_width="wrap_content"
                                 android:layout_marginLeft="10dp"></RadioButton>
                             <RadioButton android:button="@drawable/radiobutton_selector1"
-
+                                android:id="@+id/config2_radioCibleCampagne"
                                 android:layout_height="wrap_content" android:layout_width="wrap_content"
                                 android:layout_weight="0.25"></RadioButton>
                             <RadioButton android:button="@drawable/radiobutton_selector2"

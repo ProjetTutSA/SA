@@ -194,6 +194,21 @@
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
+                name="piquetblanc"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\piquetblanc.jpg"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="piquetbleu"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\piquetbleu.jpg"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="piquetrouge"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\piquetrouge.jpg"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
                 name="radiobutton_selector0"
                 path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector0.xml"
                 qualifiers="hdpi-v4"
@@ -211,6 +226,26 @@
             <file
                 name="radiobutton_selector3"
                 path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selector3.xml"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="radiobutton_selectorp0"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selectorp0.xml"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="radiobutton_selectorp1"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selectorp1.xml"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="radiobutton_selectorp2"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selectorp2.xml"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="radiobutton_selectorp3"
+                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\drawable-hdpi\radiobutton_selectorp3.xml"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
