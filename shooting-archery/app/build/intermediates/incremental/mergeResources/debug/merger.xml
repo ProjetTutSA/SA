@@ -284,11 +284,6 @@
                 qualifiers=""
                 type="layout" />
             <file
-                name="activity_detailarc"
-                path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\layout\activity_detailarc.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="activity_detailarc_activity"
                 path="C:\Users\Romain\Downloads\Android\SA\shooting-archery\app\src\main\res\layout\activity_detailarc_activity.xml"
                 qualifiers=""

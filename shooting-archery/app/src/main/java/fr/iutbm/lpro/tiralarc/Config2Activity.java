@@ -44,7 +44,7 @@ public class Config2Activity extends Activity
 	protected void onCreate(Bundle savedInstanceState) 
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_config2);
+		setContentView(R.layout.activity_nouveau);
 
 		// Show the Up button in the action bar.
 		setupActionBar();
