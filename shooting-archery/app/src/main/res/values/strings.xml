@@ -130,8 +130,8 @@
     <color name="moyenne">#ff669900</color>
     <color name="totalvolee">#ffff4444</color>
     <!-- color -->
-    <color name="color_button">#2C2C2C</color>
-    <color name="color_button_text">#45BBE6</color>
+    <color name="color_button">#83A33C</color>
+    <color name="color_button_text">"#ffffffff</color>
 
 
     <string-array name="colonnes_10_10p">

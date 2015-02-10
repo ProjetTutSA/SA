@@ -7,5 +7,6 @@
     <dimen name="size_90">90dp</dimen>
     <dimen name="size_32">32dp</dimen>
     <dimen name="size_4">4dp</dimen>
+    <dimen name="size_-30">-30dp</dimen>
 
 </resources>
