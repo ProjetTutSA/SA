@@ -8,6 +8,7 @@
     <dimen name="size5">5dp</dimen>
     <dimen name="size10">10dp</dimen>
     <dimen name="size15">15dp</dimen>
+    <dimen name="size_16">16dp</dimen>
     <dimen name="size20">20dp</dimen>
     <dimen name="size25">25dp</dimen>
     <dimen name="size30">30dp</dimen>

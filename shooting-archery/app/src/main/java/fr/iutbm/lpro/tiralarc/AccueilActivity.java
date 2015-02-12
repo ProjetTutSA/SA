@@ -47,7 +47,7 @@ public class AccueilActivity extends Activity {
         btnscore.setOnClickListener(handleClick);
         btnarc.setOnClickListener(handleClick);
 
-
+        getSharedPreferences("partie", Context.MODE_PRIVATE).edit().clear().commit();
 
 		checkOngoingGame();
 	}

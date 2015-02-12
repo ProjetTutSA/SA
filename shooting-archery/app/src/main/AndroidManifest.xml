@@ -126,6 +126,27 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.iutbm.lpro.tiralarc.ChoixReglage" />
         </activity>
+        <activity
+            android:name=".Config3CampagneActivity"
+            android:label="@string/title_activity_config3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.Config2Activity" />
+        </activity>
+        <activity
+            android:name=".InGameActivityCampagne"
+            android:label="@string/title_activity_in_game" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.AccueilActivity" />
+        </activity>
+        <activity
+            android:name=".ManualScoreCampActivity"
+            android:label="@string/title_activity_manual_score" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.InGameActivityCampagne" />
+        </activity>
     </application>
 
 </manifest>

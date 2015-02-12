@@ -91,6 +91,28 @@ public class DBHelper extends SQLiteOpenHelper {
                 "Vertical FLOAT NOT NULL,"+
                 "Profondeur FLOAT NOT NULL"+
                 ");");
+
+
+        arg0.execSQL("CREATE TABLE Campagne (" +
+                "idCampagne INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT," +
+                "idUtilisateur INTEGER NOT NULL  REFERENCES Utilisateur (idUtilisateur)," +
+                "partieFini TEXT(1) NOT NULL  DEFAULT 'F'," +
+                "datePartie TEXT NOT NULL ," +
+                "nbCible INTEGER NOT NULL  ," +
+                "competition TEXT(1) NOT NULL  DEFAULT 'E'," +
+                "NomArc TEXT(20) NOT NULL" +
+                ");");
+
+        arg0.execSQL("CREATE TABLE TirerCampagne (" +
+                "idTirerCampagne INTEGER NOT NULL  PRIMARY KEY AUTOINCREMENT," +
+                "idCampagne INTEGER NOT NULL  REFERENCES Campagne (idCampagne)," +
+                "noVolee INTEGER NOT NULL  DEFAULT 1," +
+                "score INTEGER NOT NULL  DEFAULT 1," +
+                "idCible INTEGER NOT NULL  DEFAULT 1," +
+                "connu TEXT(1) NOT NULL  DEFAULT 'F'," +
+                "Distance INTEGER NOT NULL  DEFAULT 0," +
+                "ordreLancer INTEGER NOT NULL  DEFAULT 1" +
+                ");");
 		
 		//Insertion de donnees statiques
 		// -- Grade
@@ -106,7 +128,11 @@ public class DBHelper extends SQLiteOpenHelper {
 		// -- Cible
 		arg0.execSQL("INSERT INTO 'Cible' VALUES(null,'Blason');");
 		arg0.execSQL("INSERT INTO 'Cible' VALUES(null,'Trispot');");
-		
+        arg0.execSQL("INSERT INTO 'Cible' VALUES(null,'Birdee');");
+        arg0.execSQL("INSERT INTO 'Cible' VALUES(null,'Gazinière');");
+        arg0.execSQL("INSERT INTO 'Cible' VALUES(null,'60');");
+        arg0.execSQL("INSERT INTO 'Cible' VALUES(null,'80');");
+
 		// -- Diametre
 		arg0.execSQL("INSERT INTO 'Diametre' VALUES(null,1,40);");
 		arg0.execSQL("INSERT INTO 'Diametre' VALUES(null,1,60);");
@@ -124,6 +150,7 @@ public class DBHelper extends SQLiteOpenHelper {
         arg0.execSQL("INSERT INTO 'TypeArc' VALUES(null,'BareBow');");
         arg0.execSQL("INSERT INTO 'TypeArc' VALUES(null,'Droit');");
         arg0.execSQL("INSERT INTO 'TypeArc' VALUES(null,'Chasse');");
+
 	}
 
 	@Override
@@ -385,7 +412,6 @@ public class DBHelper extends SQLiteOpenHelper {
 		db.update("Partie",values, "idPartie =" + idPartie, null);
 		db.close();
 	}
-	
 	public ArrayList<Partie> sortPartie(Integer idUtilisateur, Boolean typeCible, Boolean entr_comp, Boolean environnement) {
 		ArrayList<Partie> parties = new ArrayList<Partie>();
 		
@@ -413,7 +439,212 @@ public class DBHelper extends SQLiteOpenHelper {
 		db.close();
 		return parties;
 	}
-	
+
+    // Campagne
+
+
+    public int addCampagne(Campagne campagne) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("idUtilisateur", campagne.getIdUtilisateur());
+        values.put("partieFini", campagne.isPartieFini());
+        values.put("datePartie", campagne.getDatePartie().getTime());
+        values.put("nbCible", campagne.getNbCibles());
+        values.put("competition", ((campagne.isCompetition())?"C":"E"));
+        values.put("NomArc",campagne.getNomArc());
+
+        int idCampagne = Integer.valueOf(String.valueOf(db.insert("Campagne", null, values)));
+        db.close();
+        return idCampagne;
+    }
+
+    public int checkOngoingGameCampagne() {
+        String selectQuery = "SELECT count(partieFini),idCampagne FROM Campagne WHERE partieFini != 'T' ;";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        int idCampagne = 0;
+
+        if(cursor.moveToFirst()) {
+            if (cursor.getInt(0) != 0)
+                idCampagne=cursor.getInt(1);
+        }
+
+        cursor.close();
+        db.close();
+        return idCampagne;
+    }
+
+    public void incCibleCampagne(int idCampagne) {
+        Campagne campagne = getCampagne(idCampagne);
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values=new ContentValues();
+        values.put("nbCible", campagne.getNbCibles() + 1);
+        db.update("Campagne",values, "idCampagne =" + idCampagne, null);
+        db.close();
+    }
+
+    public void terminerCampagne(int idCampagne)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ContentValues values=new ContentValues();
+        values.put("partieFini", "T");
+        db.update("Campagne",values, "idCampagne =" + idCampagne, null);
+        db.close();
+    }
+
+    public void supprimerCampagne(int idCampagne)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("Campagne","idCampagne ="+idCampagne, null);
+        db.delete("TirerCampagne","idCampagne ="+idCampagne, null);
+        db.close();
+    }
+
+    public Campagne getCampagne(int idCampagne) {
+        String selectQuery= "SELECT * FROM Campagne WHERE idCampagne =" + idCampagne + ";";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        Campagne campagne = null;
+
+        if(cursor.moveToFirst()) {
+            campagne = new Campagne(
+                    cursor.getInt(0),
+                    cursor.getInt(1),
+                    (cursor.getString(2).equals("T")?true:false),//boolean partieFini,
+                    new Date(cursor.getLong(3)),
+                    cursor.getInt(4),
+                    (cursor.getString(5).equals("C")?true:false),
+                    cursor.getString(6));
+        }
+
+        cursor.close();
+        db.close();
+        return campagne;
+    }
+
+    public ArrayList<Integer> getLastCampagne() {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+
+        String selectQuery= "SELECT idCampagne FROM Campagne ORDER BY datePartie DESC LIMIT 5;";
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                result.add(cursor.getInt(0));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return result;
+    }
+
+    public void normalizeCibles(int idCampagne) {
+        Campagne campagne = getCampagne(idCampagne);
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values=new ContentValues();
+        values.put("nbCible", campagne.getNbCibles() - 1);
+        db.update("Campagne",values, "idCampagne =" + idCampagne, null);
+        db.close();
+    }
+
+
+    /*public ArrayList<Partie> sortCampagne(Integer idUtilisateur, Boolean typeCible, Boolean entr_comp, Boolean environnement) {
+        ArrayList<Partie> parties = new ArrayList<Partie>();
+
+        SQLiteDatabase db = getReadableDatabase();
+        String SQLQuery = "SELECT idPartie FROM Partie WHERE idUtilisateur=" + idUtilisateur;
+
+        if (typeCible != null)
+            SQLQuery += " AND idCible=" + String.valueOf(typeCible==true?1:2);
+
+        if (entr_comp != null)
+            SQLQuery += " AND comp_entrain='" + (entr_comp==true?"C":"E") + "'";
+
+        if (environnement != null)
+            SQLQuery += " AND ext_int='" + (environnement==true?"E":"I") + "'";
+
+        SQLQuery += " ORDER BY datePartie DESC;";
+        Cursor cursor = db.rawQuery(SQLQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                parties.add(getPartie(cursor.getInt(0)));
+            } while (cursor.moveToNext());
+        }
+
+        db.close();
+        return parties;
+    }*/
+
+   /// Tirer Campagne
+   public void addTirerCampagne(int idCampagne, int noVolee, int score, int idCible, boolean connu, int distance, int ordreLancer) {
+       SQLiteDatabase db = this.getWritableDatabase();
+
+       ContentValues values = new ContentValues();
+       values.put("idCampagne", idCampagne);
+       values.put("idCible", idCible);
+       values.put("noVolee", noVolee);
+       values.put("connu", connu);
+       values.put("Distance", distance);
+       values.put("ordreLancer", ordreLancer);
+       values.put("score", score);
+
+       db.insert("TirerCampagne", null, values);
+       db.close();
+   }
+    public ArrayList<TirerCampagne> getTirerOfCamp(int idCampagne) {
+        ArrayList<TirerCampagne> resultat = new ArrayList<TirerCampagne>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM TirerCampagne WHERE idCampagne =" + idCampagne +
+                " ORDER BY noVolee;", null);
+        if (cursor.moveToFirst()) {
+            do {
+                resultat.add(new TirerCampagne(cursor.getInt(0),
+                        cursor.getInt(1),
+                        cursor.getInt(2),
+                        cursor.getInt(3),
+                        cursor.getInt(4),
+                        (cursor.getString(5).equals("T")?true:false),
+                        cursor.getInt(6),
+                        cursor.getInt(7))
+                );
+            } while (cursor.moveToNext());
+        }
+
+        db.close();
+        return resultat;
+    }
+
+    public ArrayList<TirerCampagne> getTirerOfCamp(int idCampagne, int nbVolee) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        ArrayList<TirerCampagne> resultat = new ArrayList<TirerCampagne>();
+        String selectQuery = "SELECT * FROM TirerCampagne WHERE idCampagne=" + idCampagne + " AND noVolee=" + nbVolee + " ORDER BY ordreLancer;";
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                resultat.add(new TirerCampagne(cursor.getInt(0),
+                        cursor.getInt(1),
+                        cursor.getInt(2),
+                        cursor.getInt(3),
+                        cursor.getInt(4),
+                        (cursor.getString(5).equals("T")?true:false),
+                        cursor.getInt(6),
+                        cursor.getInt(7)));
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return resultat;
+    }
+
+
 	//---------------------------------------------------------------
 	// Grade
 	
@@ -572,6 +803,19 @@ public class DBHelper extends SQLiteOpenHelper {
 		db.close();
 		return cible;
 	}
+    public Cible getIdCibleFromName(String nomCible) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query("Cible", new String[] { "idCible", "LibCible" }, "LibCible='"+nomCible+"'" , null, null, null, null);
+        if (cursor != null)
+            cursor.moveToFirst();
+
+        Cible cible = new Cible(cursor.getInt(0), cursor.getString(1));
+
+        cursor.close();
+        db.close();
+        return cible;
+    }
 
 	//---------------------------------------------------------------
 	// Diametre

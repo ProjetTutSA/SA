@@ -50,14 +50,18 @@
     <string name="int_ext_error">Veuillez choisir si vous êtes en intérieur ou en extérieur !</string>
     <string name="distance_error">La distance doit être différente de 0.</string>
     <string name="volees_error">Le nombre de volées doit être différent de 0.</string>
+    <string name="numcible_error">Le numéro de cible doit être entre 1 et 24.</string>
     <string name="manches_error">Le nombre de manches doit être différent de 0.</string>
     <string name="nbfleche_error">Veuillez saisir le nombre de flèches.</string>
+    <string name="piquet_error">Veuillez choisir un Piquet.</string>
+    <string name="type_cible_error">Veuillez choisir un type de Cible.</string>
     <string name="conditions_error">Vous devez choisir les conditions : entrainement ou compétition.</string>
     <string name="erreur">Erreur</string>
     <string name="title_activity_manual_score">Score manuel</string>
     <string name="accueil_libscorerecent">Scores récents</string>
     <string name="attention">Attention</string>
-    <string name="toomanyplay">Impossible de continuer, vous avez déja joué toutes les manches.</string>
+    <string name="toomanyplay">Impossible de continuer, vous avez déja tiré toutes les manches.</string>
+    <string name="toomanyplaycamp">Impossible de continuer, vous avez déja tiré toutes les volées.</string>
     <string name="tabbot_totalpartie">Total de la partie</string>
     <string name="tabtop_numero">N°</string>
     <string name="tabtop_pointsparfleches">Points par flèches</string>
@@ -111,6 +115,8 @@
     <string name="no_result">Aucun résultat n\'a été trouvé.</string>
     <string name="nombre_10">Nombre\nde 10</string>
     <string name="nombre_9">Nombre\nde 9</string>
+    <string name="nombre_6">Nombre\nde 6</string>
+    <string name="nombre_5">Nombre\nde 5</string>
     <string name="edit_user">Modifier un utilisateur...</string>
     <string name="reset_db">Réinitialiser la base de données</string>
     <string name="data">Données</string>
@@ -139,6 +145,23 @@
     <string name="horizontal_reg">Horizontal :</string>
     <string name="vertical_reg">Vertical :</string>
     <string name="add_reg">Ajouter un Réglage</string>
+    <string name="moyenne">Moyenne</string>
+
+
+    ///CAMPAGNE
+    <string name="campagne">Campagne</string>
+    <string name="cible">Cible</string>
+    <string name="nbr_cible">Nombre de cibles : </string>
+    <string name="cible12">12 </string>
+    <string name="cible24">24 </string>
+    <string name="num_cible">Numéro de la première cible :</string>
+
+    <string  name="known_unknown">Veuillez choisir le Type de cible.</string>
+    <string name="enter_score">Entrer score</string>
+    <string name="connu">Connu</string>
+    <string name="inconnu">Inconnu</string>
+
+
 
     <color name="color_slashScreen">#e5e5e5</color>
     <color name="titre1">#ff0099cc</color>
@@ -148,6 +171,7 @@
     <color name="totalvolee">#ffff4444</color>
     <color name="color_button">#2C2C2C</color>
     <color name="color_button_text">#45BBE6</color>
+    <color name="color_jaune">#FFC04D</color>
 
     <string-array name="colonnes_10_10p">
         <item >Total par volée</item>

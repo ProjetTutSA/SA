@@ -245,6 +245,7 @@ public class Config1Activity extends Activity {
 
 	private void savePreferences() 
 	{
+
 		SharedPreferences preferences = getSharedPreferences("partie", Context.MODE_PRIVATE);
 		SharedPreferences.Editor editor = preferences.edit();
 		editor.putString("NomUtilisateur", UserSpinner.getSelectedItem().toString());

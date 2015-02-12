@@ -70,29 +70,7 @@
                         android:gravity="center"
                         android:text="3" />
 
-                    <TextView
-                        android:id="@+id/tabtop2_f4"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="4" />
 
-                    <TextView
-                        android:id="@+id/tabtop2_f5"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="5" />
-
-                    <TextView
-                        android:id="@+id/tabtop2_f6"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="6" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -117,9 +95,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight=".4"
-            android:weightSum="3" >
-
+            android:layout_weight=".6"
+            android:weightSum="5" >
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="0dp"
@@ -128,6 +105,23 @@
                 android:gravity="center"
                 android:text="@string/moyenne"
                 android:textColor="@color/moyenne" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cible"
+                android:textColor="@color/moyenne" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/distance"
+                android:textColor="@color/moyenne" />
 
             <TextView
                 android:id="@+id/textView1"
@@ -135,7 +129,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/nombre_10"
+                android:text="@string/nombre_6"
                 android:textColor="@color/titre1" />
 
             <TextView
@@ -144,7 +138,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/nombre_9"
+                android:text="@string/nombre_5"
 
             android:textColor="@color/nb9" />
     </LinearLayout>

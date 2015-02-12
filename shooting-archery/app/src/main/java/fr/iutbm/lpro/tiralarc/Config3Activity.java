@@ -334,7 +334,7 @@ public class Config3Activity extends Activity  {
     			sp.getBoolean("RadioCompetition", false),//competition
     			sp.getBoolean("RadioExterieur", true),//exterieur
     			sp.getInt("idDiametre",0),
-                sp.getString("NomArc", "test"))
+                sp.getString("NomArc", "test")) //nom arc
     			);
     	sp.edit().putInt("idPartie", idPartie).commit();
 	}
