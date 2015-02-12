@@ -33,7 +33,7 @@
             android:textColorHint="@color/color_button_text"
             android:textSize="@dimen/size_32"
             android:drawableLeft="@drawable/sheet3"
-            android:drawablePadding="@dimen/size_-30"
+
 
             android:elegantTextHeight="false"
             android:paddingLeft="@dimen/size_32"

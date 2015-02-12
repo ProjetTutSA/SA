@@ -119,6 +119,34 @@
             android:name="fr.iutbm.lpro.tiralarc.nouveau_activity"
             android:label="@string/title_activity_detailarc_activity" >
         </activity>
+        <activity
+            android:name=".ConseilTirActivity"
+            android:label="@string/title_activity_conseil_tir" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.ConseilActivity" />
+        </activity>
+        <activity
+            android:name=".ConseilReglage"
+            android:label="@string/title_activity_conseil_reg" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.ConseilActivity" />
+        </activity>
+        <activity
+            android:name=".ConseilArcActivity"
+            android:label="@string/title_activity_conseil_arc" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.ConseilActivity" />
+        </activity>
+        <activity
+            android:name=".ConseilActivity"
+            android:label="@string/title_activity_conseil" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.AccueilActivity" />
+        </activity>
     </application>
 
 </manifest>
