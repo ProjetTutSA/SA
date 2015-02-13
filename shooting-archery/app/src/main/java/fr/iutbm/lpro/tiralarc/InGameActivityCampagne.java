@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 import fr.iutbm.lpro.tiralarc.dbman.Campagne;
 import fr.iutbm.lpro.tiralarc.dbman.DBHelper;
-import fr.iutbm.lpro.tiralarc.dbman.Partie;
 
 public class InGameActivityCampagne extends Activity {
 
@@ -214,7 +213,7 @@ public class InGameActivityCampagne extends Activity {
 	private void makeNotification() {
 		NotificationCompat.Builder mBuilder =
 		        new NotificationCompat.Builder(this)
-		        .setSmallIcon(R.drawable.ic_launcher)
+		        .setSmallIcon(R.drawable.target)
 		        .setContentTitle(getString(R.string.app_name))
 		        .setContentText(getString(R.string.notif_txt));
 		Intent resultIntent = new Intent(this, InGameActivityCampagne.class);
@@ -223,8 +222,9 @@ public class InGameActivityCampagne extends Activity {
 		stackBuilder.addNextIntent(resultIntent);
 		PendingIntent resultPendingIntent =
 		        stackBuilder.getPendingIntent(
+
 		            0,
-		            PendingIntent.FLAG_UPDATE_CURRENT
+		            PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_ONE_SHOT
 		        );
 		mBuilder.setContentIntent(resultPendingIntent);
 		NotificationManager mNotificationManager =

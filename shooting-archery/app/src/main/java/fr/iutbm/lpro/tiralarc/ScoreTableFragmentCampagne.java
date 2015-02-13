@@ -114,6 +114,7 @@ public class ScoreTableFragmentCampagne extends Fragment {
         result.addView(hsv);
 
         View ligneTot = inflater.inflate(R.layout.fragment_manchebottom, container,false);
+        ((TextView) ligneTot.findViewById(R.id.nombre_cumul)).setText("Nombre de 6/5");
         if (!partie.isCompetition()) {
             ((TextView) ligneTot.findViewById(R.id.tabbot_string)).setText(R.string.total_entrainement);
         }
@@ -229,6 +230,7 @@ public class ScoreTableFragmentCampagne extends Fragment {
                     ((TextView) ligneManche.findViewById(R.id.tabbot_flemoy)).setText(String.format("%.2f",(float) scoreManche/(tirer.getNoVolee()*3)));
                     ((TextView) ligneManche.findViewById(R.id.tabbot_moy)).setText(String.format("%.2f",(float) scoreManche/tirer.getNoVolee()));
                     ((TextView) ligneManche.findViewById(R.id.tabbot_9)).setText(String.valueOf(nb6_total) + "/" +String.valueOf(nb5_total));
+                    ((TextView) ligneManche.findViewById(R.id.nombre_cumul)).setText("Nombre de 6/5");
 
                     scoreManche = 0;
                     nb6_total = 0;

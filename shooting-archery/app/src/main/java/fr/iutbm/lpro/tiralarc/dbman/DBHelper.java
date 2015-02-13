@@ -1203,7 +1203,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
     public List<Graduation> getListReglageByArc(int id) {
         List<Graduation> result = new ArrayList<Graduation>();
-        String selectQuery= "SELECT * FROM Graduation where idArc ="+id+";";
+        String selectQuery= "SELECT * FROM Graduation where idArc ="+id+" ORDER BY Distance;";
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
         // looping through all rows and adding to list

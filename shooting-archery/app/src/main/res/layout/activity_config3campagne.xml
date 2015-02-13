@@ -2,12 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:paddingLeft="@dimen/size15"
+        android:layout_marginTop="@dimen/size10"
+        android:text="@string/choix_piquet"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/color_button" />
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:orientation="horizontal" >
+
 
         <RadioGroup
             android:id="@+id/radioGroup1"
@@ -62,7 +71,7 @@
                 android:padding="15dp"
                 android:text="@string/nbr_cible"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
+ />
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
@@ -70,7 +79,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
                 android:orientation="horizontal"
-                android:paddingLeft="1dp" >
+                android:paddingLeft="1dp"
+                android:paddingTop="@dimen/size15">
 
                 <RadioButton
                     android:id="@+id/config3Campagne_radio12"
@@ -102,7 +112,7 @@
             android:padding="15dp"
             android:text="@string/num_cible"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textStyle="bold" />
+ />
 
         <EditText
             android:layout_width="wrap_content"

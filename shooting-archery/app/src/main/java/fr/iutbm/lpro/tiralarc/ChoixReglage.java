@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.text.Html;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,6 +21,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fr.iutbm.lpro.tiralarc.dbman.Arc;
@@ -76,27 +78,93 @@ public class ChoixReglage extends Activity {
         for (Graduation grad : listgrad) {
 
             float dp = getResources().getDisplayMetrics().density;
+            if (TextUtils.isEmpty(grad.getRemarque())){
+                String remarque = "Aucune";
+            }else{
+                String remarque = grad.getRemarque();
+            }
             String remarque = grad.getRemarque();
             int Distance = grad.getDistance();
-            String text = "Distance : " + Distance+"m <br/><small>Remarque : "+ remarque+"</small>";
+            double horizontal = grad.getHorizontal();
+            double vertical = grad.getVertical();
+            double profondeur = grad.getProfondeur();
+            String textDistance = "Distance : " + Distance+"m";
+            String textHorizontal = "Horizontal : "+horizontal;
+            String textVertical = "Vertical : "+vertical;
+            String textProfondeur = "Profondeur : "+profondeur;
+            String textRemarque = "Remarque : "+remarque;
+
             Button regBut = new Button(this);
+            final LinearLayout llGrad = new LinearLayout(this);
+            TextView tvHori = new TextView(this);
+            TextView tvVert = new TextView(this);
+            TextView tvProf = new TextView(this);
+            TextView tvRemq = new TextView(this);
 
-            regBut.setText(Html.fromHtml(text));
-//          arcBut.setText(nom);
-            regBut.setTextColor(getResources().getColor(R.color.color_button_text));
-            regBut.setHintTextColor(getResources().getColor(R.color.color_button_text));
+            ///SET DU BOUTON
+            regBut.setText(Html.fromHtml(textDistance));
+            regBut.setTextColor(getResources().getColor(R.color.color_button_text_menu));
+            regBut.setHintTextColor(getResources().getColor(R.color.color_button_text_menu));
 
-            regBut.setBackgroundColor(getResources().getColor(R.color.color_button));
+            regBut.setBackgroundColor(getResources().getColor(R.color.color_button_menu));
             regBut.setTextSize(25);
 
-            LinearLayout.MarginLayoutParams margin = (LinearLayout.MarginLayoutParams) ll.getLayoutParams();
-            margin.setMargins(0,0,0,10);
-            margin.height =LinearLayout.LayoutParams.WRAP_CONTENT ;
+           /* LinearLayout.MarginLayoutParams margin = (LinearLayout.MarginLayoutParams) ll.getLayoutParams();
+            margin.setMargins(20,0,0,20);
+            margin.width = LinearLayout.LayoutParams.MATCH_PARENT;
+            margin.height =LinearLayout.LayoutParams.WRAP_CONTENT ;*/
             regBut.setGravity(Gravity.CENTER_HORIZONTAL);
-            regBut.setLayoutParams(margin);
+            //regBut.setLayoutParams(margin);
+            // FIN DU SET BUTTON
+            //SET LL AVEC LES TEXTS VIEWS
+            llGrad.setOrientation(LinearLayout.VERTICAL);
 
+
+            tvHori.setText(textHorizontal);
+            tvVert.setText(textVertical);
+            tvProf.setText(textProfondeur);
+            tvRemq.setText(textRemarque);
+
+            tvHori.setTextSize(20);
+            tvVert.setTextSize(20);
+            tvProf.setTextSize(20);
+            tvRemq.setTextSize(20);
+
+            tvHori.setTextColor(getResources().getColor(R.color.color_button_menu));
+            tvVert.setTextColor(getResources().getColor(R.color.color_button_menu));
+            tvProf.setTextColor(getResources().getColor(R.color.color_button_menu));
+            tvRemq.setTextColor(getResources().getColor(R.color.color_button_menu));
+
+            tvHori.setPadding(50,0,0,0);
+            tvVert.setPadding(50,0,0,0);
+            tvProf.setPadding(50,0,0,0);
+            tvRemq.setPadding(50,0,0,0);
+
+            llGrad.addView(tvHori);
+            llGrad.addView(tvVert);
+            llGrad.addView(tvProf);
+            llGrad.addView(tvRemq);
+
+            //FIN LL
+            //ADD TO VIEWS
             regBut.requestLayout();
+            llGrad.setVisibility(View.GONE);
+
+
+            regBut.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if( llGrad.getVisibility()== View.VISIBLE){
+                        llGrad.setVisibility(View.GONE);
+                    }
+                    else {
+                        llGrad.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+
             ll.addView(regBut);
+            ll.addView(llGrad);
         }
     }
 
@@ -124,6 +192,7 @@ public class ChoixReglage extends Activity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
 
 
     protected void showAddReglage (){

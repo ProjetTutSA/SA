@@ -25,9 +25,11 @@ public class AccueilActivity extends Activity {
 
 	private DBHelper db;
 	private int idPartieResumable;
+    private int idCampagneResumable;
     Button btnnew;
     Button btnscore;
     Button btnarc;
+    Button btnconseil;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,19 +39,22 @@ public class AccueilActivity extends Activity {
 		db = new DBHelper(this);
 		
 		//Créer les fragments une seule fois
-		if (savedInstanceState == null) {
+		/*if (savedInstanceState == null) {
 			makeLastGamesFragments();
-		}
+		}*/
         btnnew = (Button)  findViewById(R.id.nouveau);
         btnscore = (Button) findViewById(R.id.score);
         btnarc = (Button) findViewById(R.id.monarc);
+        btnconseil = (Button) findViewById(R.id.conseil);
         btnnew.setOnClickListener(handleClick);
         btnscore.setOnClickListener(handleClick);
         btnarc.setOnClickListener(handleClick);
+        btnconseil.setOnClickListener(handleClick);
 
-        getSharedPreferences("partie", Context.MODE_PRIVATE).edit().clear().commit();
+        //getSharedPreferences("partie", Context.MODE_PRIVATE).edit().clear().commit();
 
 		checkOngoingGame();
+        checkOngoingGameCampagne();
 	}
 	
 	@Override
@@ -95,7 +100,8 @@ public class AccueilActivity extends Activity {
 	private void checkOngoingGame() 
 	{
 		idPartieResumable = db.checkOngoingGame();
-		if(idPartieResumable==0) 
+
+		if(idPartieResumable==0 )
 			return;
 		
 		 new AlertDialog.Builder(this)
@@ -105,8 +111,11 @@ public class AccueilActivity extends Activity {
 	        .setCancelable(false)
 	        .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
 				public void onClick(DialogInterface arg0, int arg1) {
-					db.supprimerPartie(idPartieResumable);
-					idPartieResumable = 0;
+
+                        db.supprimerPartie(idPartieResumable);
+                        idPartieResumable = 0;
+
+
 					getSharedPreferences("partie", Context.MODE_PRIVATE).edit().clear().commit();
 					arg0.dismiss();
 					finish();
@@ -118,19 +127,70 @@ public class AccueilActivity extends Activity {
 			})
 	        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 	            public void onClick(DialogInterface arg0, int arg1) {
-	            	resumeOngoingGame();
-	            	arg0.dismiss();
+
+                    resumeOngoingGame(0);
+                    arg0.dismiss();
 	            }
 	        }).create().show();
 
 	}
+    private void checkOngoingGameCampagne()
+    {
+
+        idCampagneResumable = db.checkOngoingGameCampagne();
+
+        if(idCampagneResumable==0)
+            return;
+
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.attention)
+                .setMessage(R.string.checkOngoingGame)
+                .setIcon(R.drawable.warning_dark)
+                .setCancelable(false)
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+
+                            db.supprimerCampagne(idCampagneResumable);
+                            idCampagneResumable = 0;
+
+
+                        getSharedPreferences("partie", Context.MODE_PRIVATE).edit().clear().commit();
+                        arg0.dismiss();
+                        finish();
+                        Intent thisActivity = getIntent();
+                        thisActivity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                        startActivity(thisActivity);
+                    }
+
+                })
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        resumeOngoingGame(1);
+                        arg0.dismiss();
+                    }
+                }).create().show();
+
+    }
 
 	protected void trashOngoingGame() {
 		//Supprimer partie non termin�e
 	}
 
-	protected void resumeOngoingGame() {
-		Intent intent = new Intent(this, InGameActivity.class);
+
+	protected void resumeOngoingGame(int type) {
+        Intent intent;
+        switch(type){
+            case 0:
+                intent = new Intent(this, InGameActivity.class);
+                break;
+            case 1:
+                intent = new Intent(this, InGameActivityCampagne.class);
+                break;
+            default:
+                intent = new Intent(this, InGameActivity.class);
+                break;
+        }
+
     	startActivity(intent);
 	}
 
@@ -145,15 +205,7 @@ public class AccueilActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle presses on the action bar items
 	    switch (item.getItemId()) {
-	    	/*case R.id.action_search:
-	    		Intent intent3 = new Intent(this, SortActivity.class);
-	    		startActivity(intent3);
-	    		return true;
-	    
-	        case R.id.action_newgame:
-	        	Intent intent = new Intent(this, Config1Activity.class);
-            	startActivity(intent);
-	            return true;*/
+
 	        case R.id.action_settings:
 	        	Intent intent2 = new Intent(this, SettingsActivity.class);
             	startActivity(intent2);
@@ -178,10 +230,10 @@ public class AccueilActivity extends Activity {
                     Intent intent3 = new Intent(view.getContext(), ArcActivity.class);
                     startActivity(intent3);
                     break;
-                /*case R.id.conseil:
-                    Intent intent4 = new Intent(view.getContext(), SortActivity.class);
+                case R.id.conseil:
+                    Intent intent4 = new Intent(view.getContext(), ConseilActivity.class);
                     startActivity(intent4);
-                    break;*/
+                    break;
 
             }
         }

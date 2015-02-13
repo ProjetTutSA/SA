@@ -31,6 +31,7 @@
     <string name="choix_cible">Choix cible :</string>
     <string name="taille_cible">Taille cible :</string>
     <string name="cm">cm</string>
+    <string name="choix_piquet"> Choix du Piquet de tir : </string>
     <string name="exit_question">Quitter ?</string>
     <string name="sureToQuit">Êtes vous sur de quitter ? La partie ne sera pas sauvegardé.</string>
     <string name="notif_txt">Touchez pour revenir au tableau des scores.</string>
@@ -127,10 +128,10 @@
     <string name="nb_10p_total">Nombre de 10/9</string>
     <string name="nomarc">Nom arc :</string>
     <string name="typearc">Type d\'arc : </string>
-    <string name="nouveau">Nouveau</string>
-    <string name="score">Score</string>
+    <string name="nouveau">Nouveau Tir</string>
+    <string name="score">Scores</string>
     <string name="mes_arcs_accueil">Mes arcs</string>
-    <string name="conseil">Conseil</string>
+    <string name="conseil">Conseils</string>
     <string name="title_activity_arc">Mes Arcs</string>
     <string name="title_activity_choix_reglage">Réglages de l\'arc</string>
     <string name="title_activity_viseur">Réglages Viseur</string>
@@ -139,7 +140,7 @@
     <string name="viseur">Viseur</string>
     <string name="berger_button">Berger Button( A venir)</string>
     <string name="tiller">Tiller (A venir)</string>
-    <string name="nomremarque">Nom remarque :</string>
+    <string name="nomremarque">Remarque :</string>
     <string name="distance_reg">Distance(m) :</string>
     <string name="profondeur_reg">Profondeur :</string>
     <string name="horizontal_reg">Horizontal :</string>
@@ -161,7 +162,87 @@
     <string name="connu">Connu</string>
     <string name="inconnu">Inconnu</string>
 
-
+    /******* Parti Conseil **********/
+    <string name="btn_cho_arc">Les différents arcs </string>
+    <string name="btn_tir"> Echauffement et sécurité </string>
+    <string name="btn_cons_reg">Réglages de votre Arc </string>
+    <string name="title_activity_conseil">Conseil</string>
+    <string name="txt_descri">Choisissez la partie ou vous désirez avoir des conseils (Comment régler son arc proprement, Choisir un arc adapté à la cible,...)</string>
+    /********** Arc ***********/
+    <string name="title_activity_conseil_arc">Conseil</string>
+    <string name="titre_conseil_arc">Arc</string>
+    <string name="titre_conseil_diff_arc">Il n’est pas toujours évident de savoir quel arc choisir, voici les trois principaux type d\'arc existant :</string>
+    <string name="titre_arc_long">Arc de chasse (Long Bow)</string>txt_arc_long
+            <string name="txt_arc_long">Arc très simple et basique comme l\’étaient les premiers modèles. Ses branches sont droites et constituées d\’un
+                seul bloc. La poignée est elle aussi d\’une extrême simplicité, puisqu\’aucun repose flèche ne s’y trouve, pas plus qu’une fenêtre.
+                Ce type d’arc s\’adresse à des personnes maîtrisant déjà l\’art du tir à l\’arc et la manière de placer la flèche pour un tir optimal.</string>
+    <string name="titre_arc_classique"> Arc Classique</string>
+            <string name="txt_arc_classique">Le modèle le plus populaire. Son corps peut être monobloc ou démontable.
+                Le monobloc est en bois, tandis que le modèle démontable est souvent constitué d’aluminium.
+                L\’arc recurve avec un corps démontable permet des réglages plus précis qu\’avec un corps monobloc.
+                Il est également plus rigide. L\’arc recurve s\’adresse autant aux débutants qu\’aux professionnels.
+                Ces derniers choisiront généralement un modèle avec un corps démontable, qui donnera une plus grande précision dans le réglage lors des compétitions.</string>
+    <string name="titre_arc_pouli">Arc</string>
+            <string name="txt_arc_pouli"> Permet des tirs de grande puissance grâce à sa conception ingénieuse, permettant de gagner jusqu\’à 60 % de puissance par rapport au long bow.
+                Il est utilisé pour le tir sur cible aussi bien que pour la chasse. Sa poignée est la plupart du temps composée de métal.
+                Cet arc s\’adresse à tous types d\’utilisateurs, y compris débutants, et est un allié précieux lors des compétitions.</string>
+    /************ TIR ***************/
+    <string name="title_activity_conseil_tir"> Tir</string>
+    <string name="Titre_arc_tir">Tir</string>
+    <string name="txt_conseil_intro_tir">Voici quelques conseils pour bien réussir vos tirs. Choississez un point à éclaircir</string>
+    <string name="btn_tir_echauf">L\'échauffement</string>
+    <string name="btn_tir_secu">La sécurité</string>
+    <string name="titre_echauf">Avant de tirer</string>
+            <string name="txt_echauf">Avant tout effort physique, il est très important d\'échauffer nos muscles.
+                Suivez ces étapes pour garantir un entrainement ou une compétition en pleine forme : </string>
+            <string name="liste_echauf">- Petites rotations du cou avec douceur. \n
+                                        - Rotations des épaules, 5 fois en avant et 5 fois en arrières. \n
+                                        - Rotations du bassin dans un sens puis dans l\'autre.\n
+                                        - Rotations des chevilles, 5 rotations sens horaire et 5 rotations sens anti-horaire.\n
+                                        - Rotations des poignets, 5 rotations sens horaire et 5 rotations sens anti-horaire.\n
+                                        - Pour finir, bouger vos poignets dans tous les sens.\n
+            </string>
+    <string name="titre_etir">Après avoir tiré</string>
+    <string name="txt_etir">Après votre entrainement ou compétition, prenez du temps pour vous étirer convenablement, celà vous évitera des douleurs ulterieurs.</string>
+            <string name="liste_etir">
+                - Laissez tomber vos mains vers le sol pour essayer de le toucher, en expirant  profondément. \n
+                - Placer la main droite sur l\'épaule gauche, avec la main gauche pousser le coude droit. De même, avec la main gauche sur l\'épaule droite. \n
+                - Placer la main droite sur l\'épaule droite en passant derrière la tête et avec la main gauche, pousser sur le coude droit. \n
+                - Tendez votre bras et tirez sur vos doigts contre vous \n
+                - Joindre les mains au-dessus de la tête et pivoter à droite puis à gauche. \n
+            </string>
+    <string name="txt_secu">Lorsque l\'on fait du tir à l\'arc, il faut suivre certaines règles pour garantir la sécurité de tous. Voici, une liste des principales règle à respecter </string>
+            <string name="liste_collectif">
+                - Ne jamais pointer un arc vers quelqu\'un, avec ou sans flèche.\n
+                - Ne jamais toucher un archer en position de tir.\n
+                - Les archers doivent toujours être situés sur une seule ligne de tir.\n
+                - Ne jamais tirer avec du matériel endommagé.\n
+                - Les archers doivent toujours se retirer de plusieurs pas derrière la ligne de tir après leur volée.\n
+                - Attendre que tout les archers aient fini leur tir avant de chercher les flèches. \n
+                - Toute position de tir devrait assurer le libre passage de la corde. Le port de vêtement ajusté est conseillé.\n
+                - Ne pas se servir de flèches trop courtes, celle-ci peuvent occasionner de graves blessures à la main ou au bras si elles tombent du repose flèche lors du tir.\n
+                - En allonge, ne jamais lâcher une corde sans flèche. Les risques de rupture du matériel sont très importants.\n
+                - Ne pas arracher ses flèches en même temps qu\'un autre archer sur la cible. Il y risque de blesser l\'archer ou d\'être blessé au visage par l\'encoche d\'une flèche.\n
+            </string>
+    /*********** Partie reglage ***************/
+    <string name="title_activity_conseil_reg"> Réglage de votre Arc</string>
+    <string name="titre_conseil_reglage">Réglage Arc</string>
+            <string name="txt_conseil_intro_reg">Dans cette partie vous pourrez voir les différents réglages de base
+                à faire à votre arc. Veuillez essayer de suivre l\'ordre indiquer</string>
+    <string name="btn_reg_band">1 : Réglage du Band</string>
+    <string name="txt_descri_band">Le band est la distance entre votre corde et la poignée de l’arc.</string>
+    <string name="txt_reg_band">Régler le band en vous référent au tableau ci-dessous</string>
+    <string name="btn_reg_tiller">2 : Réglage du Tiller</string>
+            <string name="txt_descri_tiller">Le tiller est la distance d\'une part entre la corde et la base de la
+                branche et d\'autre part entre la corde et la branche du bas </string>
+            <string name="txt_reg_tiller">Pour bien régler le tiller, il faut que la différence entre les deux distances doit
+                être égale à environ -6mm au niveau de la brache du bas.</string>
+    <string name="btn_reg_detallonage">3 : Réglage du détalonnage</string>
+    <string name="txt_descri_deta">Le détalonnage est l\’endroit où vous devez clipser l\’encoche de votre flèche sur la corde. Pour le régler correctement, montez le à +5 à 6mm du point zéro</string>
+    <string name="btn_reg_berger">4 : Réglage du Berger Bouton</string>
+    <string name="txt_descri_bb">Le berger bouton est un matériel servant à diminuer la distorsion de la flèche, lors de son lancé</string>
+            <string name="txt_reg_bb">Pour régler le berger bouton, réglez d\'abord votre corde pour qu\'elle soit alignée avec le viseur et votre flèche.
+            Puis tirer des flèches de 5m à 30m en reculant de 5m à chaque fois. Ensuite comparé votre volée avec le schéma ci-dessus et régler votre Berger Bouton</string>
 
     <color name="color_slashScreen">#e5e5e5</color>
     <color name="titre1">#ff0099cc</color>
@@ -171,6 +252,9 @@
     <color name="totalvolee">#ffff4444</color>
     <color name="color_button">#2C2C2C</color>
     <color name="color_button_text">#45BBE6</color>
+
+    <color name="color_button_menu">#83A33C</color>
+    <color name="color_button_text_menu">#ffffff</color>
     <color name="color_jaune">#FFC04D</color>
 
     <string-array name="colonnes_10_10p">

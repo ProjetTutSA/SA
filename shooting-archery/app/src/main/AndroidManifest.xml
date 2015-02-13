@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.iutbm.lpro.tiralarc"
     android:versionCode="3"
-    android:versionName="0.1.2" >
+    android:versionName="0.1.8" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -147,6 +147,36 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.iutbm.lpro.tiralarc.InGameActivityCampagne" />
         </activity>
+        <activity
+            android:name=".ConseilTirActivity"
+            android:label="@string/title_activity_conseil_tir" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.ConseilActivity" />
+        </activity>
+        <activity
+            android:name=".ConseilReglage"
+            android:label="@string/title_activity_conseil_reg" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.ConseilActivity" />
+        </activity>
+        <activity
+            android:name=".ConseilActivity"
+            android:label="@string/title_activity_conseil" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.AccueilActivity" />
+        </activity>
+        <activity
+            android:name=".ConseilArcActivity"
+            android:label="@string/title_activity_conseil_arc" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.iutbm.lpro.tiralarc.ConseilActivity" />
+        </activity>
+
+
     </application>
 
 </manifest>

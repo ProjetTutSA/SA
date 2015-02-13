@@ -109,7 +109,6 @@ public class ManualScoreCampActivity extends Activity implements OnFocusChangeLi
 		
 		
 	}
-	
 
 
     @Override

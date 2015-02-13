@@ -211,7 +211,7 @@ public class InGameActivity extends Activity {
 	private void makeNotification() {
 		NotificationCompat.Builder mBuilder =
 		        new NotificationCompat.Builder(this)
-		        .setSmallIcon(R.drawable.ic_launcher)
+		        .setSmallIcon(R.drawable.target)
 		        .setContentTitle(getString(R.string.app_name))
 		        .setContentText(getString(R.string.notif_txt));
 		Intent resultIntent = new Intent(this, InGameActivity.class);

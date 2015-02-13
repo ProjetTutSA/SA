@@ -139,10 +139,10 @@ public class ArcActivity extends Activity {
 
 //FIN TEST
             arcBut.setText(nom);
-            arcBut.setTextColor(getResources().getColor(R.color.color_button_text));
-            arcBut.setHintTextColor(getResources().getColor(R.color.color_button_text));
+            arcBut.setTextColor(getResources().getColor(R.color.color_button_text_menu));
+            arcBut.setHintTextColor(getResources().getColor(R.color.color_button_text_menu));
             arcBut.setId(arcsolo.getIdArc());
-            arcBut.setBackgroundColor(getResources().getColor(R.color.color_button));
+            arcBut.setBackgroundColor(getResources().getColor(R.color.color_button_menu));
             arcBut.setTextSize(30);
 
             LinearLayout.MarginLayoutParams margin = (LinearLayout.MarginLayoutParams) ll.getLayoutParams();
