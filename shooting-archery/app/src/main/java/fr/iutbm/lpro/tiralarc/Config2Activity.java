@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.support.v4.app.NavUtils;
@@ -37,6 +38,7 @@ public class Config2Activity extends Activity
     Spinner DiametreSpinner=null;
     private ArrayList<Diametre> listDiametre;
     private Spinner spinner;
+    private LinearLayout contentTaille;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -60,13 +62,18 @@ public class Config2Activity extends Activity
 
 
 
-        if(preferences.getBoolean("RadioCibleCampagne", false))
+        if(preferences.getBoolean("RadioCibleCampagne", false)) {
+            contentTaille.setVisibility(View.GONE);
             classiqueRadio.setChecked(true);
-        if(preferences.getBoolean("RadioCibleBlason", false))
+        }
+        if(preferences.getBoolean("RadioCibleBlason", false)){
+            contentTaille.setVisibility(View.VISIBLE);
             trispotRadio.setChecked(true);
-        if(preferences.getBoolean("RadioCibleTrispot", false))
+        }
+        if(preferences.getBoolean("RadioCibleTrispot", false)){
+            contentTaille.setVisibility(View.VISIBLE);
             trispotRadio.setChecked(true);
-
+        }
         //lecture choix condition
         if(preferences.getBoolean("RadioEntrainement", false))
             entrainement.setChecked(true);
@@ -80,7 +87,7 @@ public class Config2Activity extends Activity
         db = new DBHelper(this);
 //		classique = (RadioButton)findViewById(R.id.config2_cibleImg);
 //		trispot = (RadioButton)findViewById(R.id.config2_cibleTrispotImg);
-
+        contentTaille = (LinearLayout) findViewById(R.id.contentTaille);
         spinner = (Spinner) findViewById(R.id.config2_spinnertaille);
 
         CompoundButton.OnCheckedChangeListener occl = new CompoundButton.OnCheckedChangeListener() {
@@ -89,6 +96,21 @@ public class Config2Activity extends Activity
                 if (!isChecked)
                     return;
                 updateDiametres((((View) buttonView).getId() == R.id.config2_radioCibleBlason));
+                switch(buttonView.getId()) {
+                    case R.id.config2_radioCibleBlason: {
+                        contentTaille.setVisibility(View.VISIBLE);
+                        break;
+                    }
+
+                    case R.id.config2_radioCibleTrispot: {
+                        contentTaille.setVisibility(View.VISIBLE);
+                        break;
+                    }
+                    case R.id.config2_radioCibleCampagne: {
+                        contentTaille.setVisibility(View.GONE);
+                        break;
+                    }
+                }
             }
         };
 

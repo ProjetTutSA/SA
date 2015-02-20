@@ -22,16 +22,13 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/color_button" />
 <RadioGroup
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:layout_gravity="center_horizontal">
 
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="horizontal" >
+
 
                 <RadioButton
                     android:id="@+id/cibleBirdee"
@@ -45,12 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:button="@drawable/radiobutton_gaziniere" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal" >
+
 
                 <RadioButton
                     android:id="@+id/cible60"
@@ -65,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.25"
                     android:button="@drawable/radiobutton_quatrevingt" />
-            </LinearLayout>
+
 </RadioGroup>
 
         <LinearLayout
@@ -321,7 +313,7 @@
                 android:id="@+id/five_row"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="4dp"
+                android:layout_margin="0dip"
                 android:layout_weight="50" >
             <Button
                 android:id="@+id/manscore_buttonScore0_2"
@@ -329,6 +321,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_border"
                 android:text="Manqué"
+                android:layout_margin="4dp"
                 android:layout_span="2"/>
 			</TableRow>
 		</TableLayout>
@@ -345,6 +338,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
+
             android:background="@android:color/holo_green_light"
             android:text="@string/valider"
             android:textColor="@color/color_button"

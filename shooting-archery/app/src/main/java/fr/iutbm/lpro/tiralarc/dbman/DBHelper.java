@@ -87,9 +87,9 @@ public class DBHelper extends SQLiteOpenHelper {
                 "idArc INTEGER NOT NULL  REFERENCES Arc (idArc)," +
                 "Distance INTEGER(3) NOT NULL," +
                 "Remarque TEXT NOT NULL  ," +
-                "Horizontal FLOAT NOT NULL,"+
-                "Vertical FLOAT NOT NULL,"+
-                "Profondeur FLOAT NOT NULL"+
+                "Horizontal REAL(6) NOT NULL,"+
+                "Vertical REAL(6) NOT NULL,"+
+                "Profondeur REAL(6) NOT NULL"+
                 ");");
 
 
@@ -586,7 +586,7 @@ public class DBHelper extends SQLiteOpenHelper {
        values.put("idCampagne", idCampagne);
        values.put("idCible", idCible);
        values.put("noVolee", noVolee);
-       values.put("connu", connu);
+       values.put("connu", connu?"T":"F");
        values.put("Distance", distance);
        values.put("ordreLancer", ordreLancer);
        values.put("score", score);

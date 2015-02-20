@@ -5,7 +5,8 @@
     android:weightSum="1">
 
     <TextView
-        android:layout_width="336dp"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/size10"
         android:layout_height="105dp"
         android:text="@string/txt_conseil_intro_reg"
         android:id="@+id/textView17"
@@ -41,7 +42,8 @@
             android:id="@+id/layout_band"
             >
             <TextView
-                android:layout_width="327dp"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size10"
                 android:layout_height="45dp"
 
                 android:text="@string/txt_descri_band"
@@ -52,7 +54,8 @@
                 android:src="@drawable/band"
                 android:layout_gravity="center_horizontal" />
             <TextView
-                android:layout_width="327dp"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size10"
                 android:layout_height="33dp"
 
                 android:text="@string/txt_reg_band"
@@ -88,7 +91,8 @@
             android:id="@+id/layout_tiller"
             >
             <TextView
-                android:layout_width="327dp"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size10"
                 android:layout_height="73dp"
 
                 android:text="@string/txt_descri_tiller"
@@ -99,7 +103,8 @@
                 android:src="@drawable/tiller"
                 android:layout_gravity="center_horizontal" />
             <TextView
-                android:layout_width="281dp"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size10"
                 android:layout_height="77dp"
                 android:text="@string/txt_reg_tiller"
                 android:layout_gravity="center_horizontal" />
@@ -129,7 +134,8 @@
             android:id="@+id/layout_detal"
             >
             <TextView
-                android:layout_width="327dp"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size10"
                 android:layout_height="93dp"
 
                 android:text="@string/txt_descri_deta"
@@ -163,8 +169,9 @@
             android:id="@+id/layout_berger"
             >
             <TextView
-                android:layout_width="327dp"
-                android:layout_height="70dp"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size10"
+                android:layout_height="50dp"
 
                 android:text="@string/txt_descri_bb"
                 android:layout_gravity="center_horizontal" />
@@ -175,15 +182,16 @@
                 android:layout_gravity="center_horizontal" />
 
             <TextView
-                android:layout_width="327dp"
-                android:layout_height="188dp"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size10"
+                android:layout_height="148dp"
 
                 android:text="@string/txt_reg_bb"
                 android:layout_gravity="center_horizontal" />
 
             <ImageView
                 android:layout_width="343dp"
-                android:layout_height="154dp"
+                android:layout_height="144dp"
                 android:src="@drawable/reg_bb"
                 android:layout_gravity="center_horizontal" />
         </LinearLayout>

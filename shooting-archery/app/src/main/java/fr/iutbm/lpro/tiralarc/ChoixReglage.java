@@ -21,6 +21,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -89,9 +90,9 @@ public class ChoixReglage extends Activity {
             double vertical = grad.getVertical();
             double profondeur = grad.getProfondeur();
             String textDistance = "Distance : " + Distance+"m";
-            String textHorizontal = "Horizontal : "+horizontal;
-            String textVertical = "Vertical : "+vertical;
-            String textProfondeur = "Profondeur : "+profondeur;
+            String textHorizontal = "Horizontal : "+String.format("%.3f", horizontal);
+            String textVertical = "Vertical : "+String.format("%.3f", vertical);
+            String textProfondeur = "Profondeur : "+String.format("%.3f", profondeur);
             String textRemarque = "Remarque : "+remarque;
 
             Button regBut = new Button(this);
@@ -254,7 +255,7 @@ public class ChoixReglage extends Activity {
 
                         if (submit){
 
-                            db.addGraduation(new Graduation(arcSelect.getIdArc(), 0,Integer.valueOf(distance),remarque , Float.valueOf(horizontal),Float.valueOf(vertical),Float.valueOf(profondeur)));
+                            db.addGraduation(new Graduation(arcSelect.getIdArc(), 0,Integer.valueOf(distance),remarque , Float.parseFloat(horizontal),Float.parseFloat(vertical),Float.parseFloat(profondeur)));
                             ListreglageFragments(arcSelect.getIdArc());
                             d.dismiss();
                         }

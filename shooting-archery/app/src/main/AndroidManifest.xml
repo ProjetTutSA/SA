@@ -120,13 +120,6 @@
                 android:value="fr.iutbm.lpro.tiralarc.ArcActivity" />
         </activity>
         <activity
-            android:name=".Viseur"
-            android:label="@string/title_activity_viseur" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.iutbm.lpro.tiralarc.ChoixReglage" />
-        </activity>
-        <activity
             android:name=".Config3CampagneActivity"
             android:label="@string/title_activity_config3" >
             <meta-data

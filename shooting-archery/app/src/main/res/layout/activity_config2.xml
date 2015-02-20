@@ -45,12 +45,14 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
 
                 <HorizontalScrollView
+                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="167dp"
                     android:id="@+id/horizontalScrollView" >
@@ -64,19 +66,20 @@
 
 
                         <RadioGroup android:layout_width="match_parent"
-
+                            android:layout_gravity="center_horizontal"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <RadioButton android:button="@drawable/radiobutton_selector0"
                                 android:id="@+id/config2_radioCibleBlason"
                                 android:layout_height="wrap_content" android:layout_width="wrap_content"
                                 android:layout_marginLeft="10dp"></RadioButton>
-                            <RadioButton android:button="@drawable/radiobutton_gaziniere"
-                                android:id="@+id/config2_radioCibleCampagne"
-                                android:layout_height="wrap_content" android:layout_width="wrap_content"
-                                android:layout_weight="0.25"></RadioButton>
+
                             <RadioButton android:button="@drawable/radiobutton_selector2"
                                 android:id="@+id/config2_radioCibleTrispot"
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"
+                                android:layout_weight="0.25"></RadioButton>
+                            <RadioButton android:button="@drawable/radiobutton_gaziniere"
+                                android:id="@+id/config2_radioCibleCampagne"
                                 android:layout_height="wrap_content" android:layout_width="wrap_content"
                                 android:layout_weight="0.25"></RadioButton>
                             <!--<RadioButton android:button="@drawable/radiobutton_selector3"
@@ -93,7 +96,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <LinearLayout android:id="@+id/contentTaille"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp" >

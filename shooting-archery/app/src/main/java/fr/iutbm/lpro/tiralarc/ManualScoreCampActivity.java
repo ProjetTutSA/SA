@@ -49,7 +49,7 @@ public class ManualScoreCampActivity extends Activity implements OnFocusChangeLi
 	
 	private SeekBar distance = null;
 	private TextView textProgressDistance;
-	int ProgressChanged = 0;
+	int ProgressChanged = 5;
 
 
 	@Override
@@ -207,6 +207,25 @@ public class ManualScoreCampActivity extends Activity implements OnFocusChangeLi
                 }
             }
         };
+        CompoundButton.OnCheckedChangeListener occlConnu = new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                if (!isChecked)
+                    return;
+                switch(buttonView.getId()) {
+                    case R.id.connu: {
+                        inconnu.setChecked(false);
+                        break;
+                    }
+
+                    case R.id.inconnu: {
+                        connu.setChecked(false);
+                        break;
+                    }
+
+                }
+            }
+        };
 
         birdieRadio = (RadioButton) findViewById(R.id.cibleBirdee);
         birdieRadio.setOnCheckedChangeListener(occl);
@@ -218,7 +237,9 @@ public class ManualScoreCampActivity extends Activity implements OnFocusChangeLi
         quatrevingtRadio.setOnCheckedChangeListener(occl);
 
         connu = (RadioButton) findViewById(R.id.connu);
+        connu.setOnCheckedChangeListener(occlConnu);
         inconnu = (RadioButton) findViewById(R.id.inconnu);
+        inconnu.setOnCheckedChangeListener(occlConnu);
 
 		scoreBtns.add(score0);
 		scoreBtns.add((Button) findViewById(R.id.manscore_buttonScore1_2));
