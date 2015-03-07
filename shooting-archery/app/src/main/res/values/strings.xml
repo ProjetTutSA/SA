@@ -33,21 +33,21 @@
     <string name="cm">cm</string>
     <string name="choix_piquet"> Choix du Piquet de tir : </string>
     <string name="exit_question">Quitter ?</string>
-    <string name="sureToQuit">Êtes vous sur de quitter ? La partie ne sera pas sauvegardé.</string>
+    <string name="sureToQuit">Êtes-vous sur de quitter ? La partie ne sera pas sauvegardée.</string>
     <string name="notif_txt">Touchez pour revenir au tableau des scores.</string>
     <string name="error">Erreur</string>
     <string name="no_score_upload">Pas de scores à envoyer. Terminez une séance pour décharger les données.</string>
     <string name="ok">OK</string>
     <string name="add_user">Ajouter un utilisateur</string>
     <string name="title_activity_picture">Lecture de la cible</string>
-    <string name="confirmGameEnd">Êtes-vous sur d\'avoir terminer votre cible ?</string>
-    <string name="checkOngoingGame">Une partie est en cours. Voulez vous la continuer ? Si vous décidez d\'annuler, elle sera effacée.</string>
+    <string name="confirmGameEnd">Êtes-vous sur d\'avoir terminé votre cible ?</string>
+    <string name="checkOngoingGame">Une partie est en cours. Voulez-vous la continuer ? Si vous décidez d\'annuler, elle sera effacée.</string>
     <string name="cancel">Annuler</string>
-    <string name="erreur_supperieur">Veulliez entrer une valeur correcte entre 40 et 200 cm de diamètre</string>
+    <string name="erreur_supperieur"Veuillez entrer une valeur correcte entre 40 et 200 cm de diamètre</string>
     <string name="edit">Modifier</string>
     <string name="valider">Valider</string>
     <string name="erreur_valeur_nul">Remplissez le champ Taille cible pour continuer</string>
-    <string name="erreur_radio_non_check">Choissisez une cible pour continuer</string>
+    <string name="erreur_radio_non_check">Choisissez une cible pour continuer</string>
     <string name="int_ext_error">Veuillez choisir si vous êtes en intérieur ou en extérieur !</string>
     <string name="distance_error">La distance doit être différente de 0.</string>
     <string name="volees_error">Le nombre de volées doit être différent de 0.</string>
@@ -61,12 +61,12 @@
     <string name="title_activity_manual_score">Score manuel</string>
     <string name="accueil_libscorerecent">Scores récents</string>
     <string name="attention">Attention</string>
-    <string name="toomanyplay">Impossible de continuer, vous avez déja tiré toutes les manches.</string>
-    <string name="toomanyplaycamp">Impossible de continuer, vous avez déja tiré toutes les volées.</string>
+    <string name="toomanyplay">Impossible de continuer, vous avez déjà tiré toutes les manches.</string>
+    <string name="toomanyplaycamp">Impossible de continuer, vous avez déjà tiré toutes les volées.</string>
     <string name="tabbot_totalpartie">Total de la partie</string>
     <string name="tabtop_numero">N°</string>
     <string name="tabtop_pointsparfleches">Points par flèches</string>
-    <string name="tabtop_totalvolee">Total\nvolée</string>
+    <string name="tabtop_totalvolee">Totale\nvolée</string>
     <string name="tabtop_totalcumule">Total\ncumulé</string>
     <string name="typeCible">Type de cible :</string>
     <string name="distanceCible">Distance de la cible :</string>
@@ -75,7 +75,7 @@
     <string name="en">en</string>
     <string name="nbManches">Nombre de manches</string>
     <string name="total_de_la_manche">Total de la manche</string>
-    <string name="total_entrainement">Total de l\'entrainement</string>
+    <string name="total_entrainement">Total de l\'entraînement</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_sort">Rechercher une partie</string>
     <string name="title_activity_sort_result">Résultat de recherche</string>
@@ -92,15 +92,15 @@
     <string name="trispot">Trispot</string>
     <string name="manche">Manche</string>
     <string name="delete_game">Supprimer la partie</string>
-    <string name="delete_game_confirm">Êtes-vous sûr de supprimer la partie ? Cette opération ne peut être annulé.</string>
+    <string name="delete_game_confirm">Êtes-vous sûr de supprimer la partie ? Cette opération ne peut être annulée.</string>
     <string name="saved_file_message">Le fichier %1$s a été enregistré dans le dossier %2$s.\n\nVous pouvez le récuperer en connectant votre appareil à un ordinateur.</string>
     <string name="no_user_inside">Pas d\'utilisateur enregistré, veuillez renseigner votre identité.</string>
     <string name="name_not_be_null">Nom ne doit pas être vide !</string>
-    <string name="prenom_not_null">Prenom ne doit pas être vide !</string>
+    <string name="prenom_not_null">Prénom ne doit pas être vide !</string>
     <string name="nom_arc_not_null">Le nom de l\'arc ne doit pas être vide !</string>
     <string name="distance_not_null">La distance ne doit pas être vide !</string>
-    <string name="horizontal_not_null">La valeur horizontal ne doit pas être vide !</string>
-    <string name="vertical_not_null">La valeur vertical ne doit pas être vide !</string>
+    <string name="horizontal_not_null">La valeur horizontale ne doit pas être vide !</string>
+    <string name="vertical_not_null">La valeur verticale ne doit pas être vide !</string>
     <string name="profondeur_not_null">La profondeur ne doit pas être vide !</string>
 
 
@@ -112,7 +112,7 @@
     <string name="have_to_select_user">Veuillez saisir un utilisateur !</string>
     <string name="has_to_fill_criterias">Vous devez remplir tous les critères choisis.</string>
     <string name="choose_criteria">Choix des critères</string>
-    <string name="mofidier_un_utilisateur">Mofidier un utilisateur</string>
+    <string name="mofidier_un_utilisateur">Modifier un utilisateur</string>
     <string name="no_result">Aucun résultat n\'a été trouvé.</string>
     <string name="nombre_10">Nombre\nde 10</string>
     <string name="nombre_9">Nombre\nde 9</string>
@@ -122,7 +122,7 @@
     <string name="reset_db">Réinitialiser la base de données</string>
     <string name="data">Données</string>
     <string name="show_logo">Afficher le logo de l\'IUT-BM</string>
-    <string name="about">A propos</string>
+    <string name="about">À propos</string>
     <string name="sinterface">Interface</string>
     <string name="moyenne_manche">Volée moyenne</string>
     <string name="nb_10p_total">Nombre de 10/9</string>
@@ -136,10 +136,10 @@
     <string name="title_activity_choix_reglage">Réglages de l\'arc</string>
     <string name="title_activity_viseur">Réglages Viseur</string>
     <string name="add_arc">Ajouter un Arc</string>
-    <string name="select_nom_user">Selectionner un Utilisateur :</string>
+    <string name="select_nom_user">Sélectionner un Utilisateur :</string>
     <string name="viseur">Viseur</string>
-    <string name="berger_button">Berger Button( A venir)</string>
-    <string name="tiller">Tiller (A venir)</string>
+    <string name="berger_button">Berger Button( À venir)</string>
+    <string name="tiller">Tiller (À venir)</string>
     <string name="nomremarque">Remarque :</string>
     <string name="distance_reg">Distance(m) :</string>
     <string name="profondeur_reg">Profondeur :</string>
@@ -164,14 +164,14 @@
 
     /******* Parti Conseil **********/
     <string name="btn_cho_arc">Les différents arcs </string>
-    <string name="btn_tir"> Echauffement et sécurité </string>
+    <string name="btn_tir"> Échauffement et sécurité </string>
     <string name="btn_cons_reg">Réglages de votre Arc </string>
     <string name="title_activity_conseil">Conseil</string>
-    <string name="txt_descri">Choisissez la partie ou vous désirez avoir des conseils (Comment régler son arc proprement, Choisir un arc adapté à la cible,...)</string>
+    <string name="txt_descri">Choisissez la partie où vous désirez avoir des conseils (comment régler son arc proprement, Choisir un arc adapté à la cible,...)</string>
     /********** Arc ***********/
     <string name="title_activity_conseil_arc">Conseil</string>
     <string name="titre_conseil_arc">Arc</string>
-    <string name="titre_conseil_diff_arc">Il n’est pas toujours évident de savoir quel arc choisir, voici les trois principaux type d\'arc existant :</string>
+    <string name="titre_conseil_diff_arc">Il n’est pas toujours évident de savoir quel arc choisir, voici les trois principaux types d\'arc existant :</string>
     <string name="titre_arc_long">Arc de chasse (Long Bow)</string>txt_arc_long
             <string name="txt_arc_long">Arc très simple et basique comme l\'étaient les premiers modèles. Ses branches sont droites et constituées d\'un
                 seul bloc.
@@ -181,11 +181,11 @@
     <string name="titre_arc_classique"> Arc Classique</string>
             <string name="txt_arc_classique">C\'est le type d\'arc le plus populaire. Son corps peut être monobloc ou démontable.
                 L\'arc classique, avec un corps démontable, permet des réglages plus précis qu\'avec un corps monobloc.
-                Il est également plus rigide qu\'un arc de chasse. Les débutant choisiront un corps en bois tandis que les professionelles adopteront plutôt
-                un corps en aluminium ou en magnesium.
+                Il est également plus rigide qu\'un arc de chasse. Les débutants choisiront un corps en bois tandis que les professionnelle adopteront plutôt
+                un corps en aluminium ou en  magnésium.
                 Ces derniers choisiront généralement un modèle avec un corps démontable, qui donnera une plus grande précision dans le réglage lors des compétitions.</string>
     <string name="titre_arc_pouli">Arc à poulies</string>
-            <string name="txt_arc_pouli"> Cet arc permet des tirs de grande puissance grâce à ses poulies qui multiplireont par 1.5 la puissance d\'un tir avec un long Bow.
+            <string name="txt_arc_pouli"> Cet arc permet des tirs de grande puissance grâce à ses poulies qui multiplieront par 1.5 la puissance d\'un tir avec un long Bow.
                 Il est utilisé pour le tir sur cible aussi bien que pour la chasse.
                 Cet arc s\'adresse à tous types d\'utilisateurs, y compris débutants.</string>
     /************ TIR ***************/
@@ -229,7 +229,7 @@
     /*********** Partie reglage ***************/
     <string name="title_activity_conseil_reg"> Réglage de votre Arc</string>
     <string name="titre_conseil_reglage">Réglage Arc</string>
-            <string name="txt_conseil_intro_reg">Dans cette partie vous pourrez voir les différents réglages de base
+            <string name="txt_conseil_intro_reg">Dans cette partie, vous pourrez voir les différents réglages de base
                 à faire à votre arc. Veuillez essayer de suivre l\'ordre indiquer</string>
     <string name="btn_reg_band">1 : Réglage du Band</string>
     <string name="txt_descri_band">Le band est la distance entre votre corde et la poignée de l’arc.</string>
@@ -238,13 +238,13 @@
             <string name="txt_descri_tiller">Le tiller est la distance d\'une part entre la corde et la base de la
                 branche et d\'autre part entre la corde et la branche du bas </string>
             <string name="txt_reg_tiller">Pour bien régler le tiller, il faut que la différence entre les deux distances doit
-                être égale à environ -6mm au niveau de la brache du bas.</string>
+                être égale à environ -6mm au niveau de la branche du bas.</string>
     <string name="btn_reg_detallonage">3 : Réglage du détalonnage</string>
     <string name="txt_descri_deta">Le détalonnage est l\'endroit où vous devez clipser l\'encoche de votre flèche sur la corde. Pour le régler correctement, montez le à +5 à 6mm du point zéro</string>
     <string name="btn_reg_berger">4 : Réglage du Berger Bouton</string>
     <string name="txt_descri_bb">Le berger bouton est un matériel servant à diminuer la distorsion de la flèche, lors de son lancé</string>
             <string name="txt_reg_bb">Pour régler le berger bouton, réglez d\'abord votre corde pour qu\'elle soit alignée avec le viseur et votre flèche.
-            Puis tirer des flèches de 5m à 30m en reculant de 5m à chaque fois. Ensuite comparé votre volée avec le schéma ci-dessus et régler votre Berger Bouton.</string>
+            Puis tirer des flèches de 5m à 30m en reculant de 5m à chaque fois. Ensuite comparée votre volée avec le schéma ci-dessus et régler votre Berger Bouton.</string>
 
     <color name="color_slashScreen">#e5e5e5</color>
     <color name="titre1">#ff0099cc</color>
